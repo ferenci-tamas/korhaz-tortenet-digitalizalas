@@ -51,10 +51,11 @@ Ferenci Tamás (<https://www.medstat.hu/>)<br>
   hatékonyabban, jól megőrizve az adatok táblázatos formátumát is. E
   nélkül valószínűleg lehetetlen lett volna számomra ekkora mennyiségű
   információ gépi úton feldolgozható formátumban történő digitalizálása.
-- A felismerés ugyan szinte hibátlan volt, de nem tökéletesen hibátlan,
-  így gondot fordítottam az adatok alapos ellenőrzésére is; a véleményem
-  szerint ez minden ilyen és ehhez hasonló projektnél fontos kérdés.
-  Ennek részleteit és tanulságait is ismertetem itt.
+- A felismerés szinte hibátlan volt, de nem feltétlenül tökéletesen
+  hibátlan; ez függött az alkalmazott modelltől is. Akárhogy is, gondot
+  fordítottam az adatok alapos ellenőrzésére; a véleményem szerint ez
+  minden ilyen és ehhez hasonló projektnél fontos kérdés. Ennek
+  részleteit és tanulságait is ismertetem itt.
 - Ezen az oldalon megadom a teljes kódot is, mely a feldolgozást
   végezte.
 - A munka folyamatosan zajlik, egyelőre a 2002-es év feldolgozása
@@ -238,24 +239,33 @@ meg:
   ráadásul egy embertelen monoton feladat. Az AI használatával 25 perc
   alatt megvolt az eredmény!
 - Még egyszer kiemelném, hogy rendkívül fontos volt, hogy megvoltak az
-  összegző sorok. A helyzet ugyanis az, hogy AI nem volt hibátlan.
-  *Szinte* hibátlan volt, de nem hibátlan. Megint csak a nagyságrendet
-  mondom: 2002 év feldolgozása során kb. 30 számot kellett kézzel
-  javítanom, mert – az összegzősor jelenléte miatt lehetővé vált –
-  ellenőrzés során kibukott, hogy valami nem stimmel. Ha meggondoljuk,
-  ez persze elképesztően jó (20 ezerből 30 hiba, ez 99,9%-os jóság), de
-  mégis, csak volt benne 30 hibás érték! Ha nincs az összegzősor, akkor
-  ezt jó eséllyel soha meg nem találom – vagyis kiadtam volna a kezemből
-  valamit, amiben van 30 hibás érték. (Zárójelben: az is fontos
-  tanulság, hogy – pont emiatt a ritkaság miatt – ezen a
-  szúrópróba-szerű ellenőrzés sem igen segített volna.) Nyilván itt most
-  erősen függ a dolog céljától, hogy ez mekkora baj, ebben az esetben
-  nem haltak volna meg emberek, mert 30 szám hibás, de engem azért
-  zavart volna. Úgyhogy nagyon kellettek az összegzősorok, vagyis
-  általában, a tanulság az volt számomra, hogy az ilyen AI-os dolgoknál
-  mindig gondolni kell az ellenőrzésre. Egyébként kb. 4-5 órám ment el a
-  kézi javításra; tehát nem mondom, hogy egy pillanat alatt megvolt, de
-  össze se lehet hasonlítani, hogy mennyi munka lett volna AI nélkül.
+  összegző sorok. A helyzet ugyanis az, hogy AI nem feltétlenül volt
+  hibátlan. Itt rögtön be kell szúrnom egy tanulságot a tanulságban: a
+  hibaarány nagyban függött a használt modelltől. Én csak Gemini-vel
+  próbálkoztam, de először még a 2.5-ös verzió használtam. Ez *szinte*
+  hibátlan volt, de nem hibátlan: a 2002 év feldolgozása során kb. 30
+  számot kellett kézzel javítanom, mert – az összegzősor jelenléte miatt
+  lehetővé vált – ellenőrzés során kibukott, hogy valami nem stimmel. Ha
+  meggondoljuk, ez persze elképesztően jó (20 ezerből 30 hiba, ez
+  99,9%-os jóság), de mégis, csak volt benne 30 hibás érték! Ha nincs az
+  összegzősor, akkor ezt jó eséllyel soha meg nem találom – vagyis
+  kiadtam volna a kezemből valamit, amiben van 30 hibás érték.
+  (Zárójelben: az is fontos tanulság, hogy – pont emiatt a ritkaság
+  miatt – ezen a szúrópróba-szerű ellenőrzés sem igen segített volna.)
+  Nyilván itt most erősen függ a dolog céljától, hogy ez mekkora baj,
+  ebben az esetben nem haltak volna meg emberek, mert 30 szám hibás, de
+  engem azért zavart volna. Úgyhogy nagyon kellettek az összegzősorok,
+  vagyis általában, a tanulság az volt számomra, hogy az ilyen AI-os
+  dolgoknál mindig gondolni kell az ellenőrzésre. Egyébként kb. 4-5 órám
+  ment el a kézi javításra; tehát nem mondom, hogy egy pillanat alatt
+  megvolt, de össze se lehet hasonlítani, hogy mennyi munka lett volna
+  AI nélkül. Viszont: amikor áttértem a 3.0-s verzióra, akkor ez a
+  hibaarány lement (szó szerint) 0-ra: ezzel a verzióval sem 2002-ben,
+  sem 2001-ben nem vétett egyetlen hibát sem a felismerés…! Ezzel együtt
+  is, az óvatosság elve azt mondatja velem, hogy az ellenőrzést
+  tekintsük fontosnak, hiszen nem tudhatjuk, hogy mit fog a használt
+  modell produkálni (ellenőrzés nélkül azt sem tudhatjuk, hogy tényleg
+  hibátlan-e!).
 
 ## Technikai részletek
 
