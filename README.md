@@ -2,7 +2,7 @@ Az 1993 és 2002 közötti magyar kórházi ágyszám- és betegforgalmi
 kimutatások digitalizációja
 ================
 Ferenci Tamás (<https://www.medstat.hu/>)<br>
-2025. december 14.
+2025. december 27.
 
 - [Összefoglaló](#összefoglaló)
 - [Motiváció](#motiváció)
@@ -10,6 +10,7 @@ Ferenci Tamás (<https://www.medstat.hu/>)<br>
 - [Tanulságok](#tanulságok)
 - [Technikai részletek](#technikai-részletek)
 - [Adatbeolvasási megállapítások](#adatbeolvasási-megállapítások)
+  - [2001](#2001)
   - [2002](#2002)
 
 ## Összefoglaló
@@ -258,19 +259,29 @@ meg:
 
 ## Technikai részletek
 
-A felismeréshez a [Google Gemini](https://gemini.google/hu/about/?hl=hu)
-rendszert használtam, a 2002-es évhez a 2.5-pro változatot. Az egész
-feladatot az [R statisztikai
-környezet](https://ferenci-tamas.github.io/r-nyelv/) alatt oldottam meg,
-a [gemini.R](https://github.com/jhk0530/gemini.R) csomag használatával.
+A felismeréshez a [Google Gemini](https://gemini.google/hu/about/)
+rendszer `3-pro-preview` verzióját használtam. Az egész feladatot az [R
+statisztikai környezet](https://ferenci-tamas.github.io/r-nyelv/) alatt
+oldottam meg, a [gemini.R](https://github.com/jhk0530/gemini.R) csomag
+használatával.
 
 Az adatok kezeléséhez a
 [`data.table`](https://ferenci-tamas.github.io/r-nyelv/datatable.html)
-csomagot fogjuk használni:
+csomagot használtam:
 
 ``` r
 library(data.table)
 ```
+
+Bevezetek egy változót arra, hogy éppen melyik évet dolgozzuk fel:
+
+``` r
+ev <- 2002
+```
+
+Egyrészt így a lenti kód is elegánsabban fog kinézni (hiszen nem a
+konkrét évszám lesz beleégetve), másrészt néhol év függvényében eltérő
+dolgot kell csinálni.
 
 Első lépésben a PDF-et oldalanként képfájllá alakítottam. (Erre jó
 eséllyel nem lenne igazából szükség, mert egyben is fel tudná dolgozni,
@@ -281,20 +292,19 @@ alakítottam a képet az
 eredeti szkennelt kép szürkeárnyalatos volt, de természetesen itt a
 szürkének nincs jelentősége, csak fekete és fehér lehet az oldal
 igazából, így reméltem, hogy ez az átalakítás csökkenti a zajt),
-másrészt a
-[magick](https://imagemagick.org/script/command-line-options.php#deskew)
-könyvtár megfelelő parancsával megpróbáltam automatikusan kiegyenesíteni
-a képet (némelyik picit ferde volt eredetileg), hátha ez is segíti a
-későbbi felismerést. A kód:
+másrészt a [magick](https://imagemagick.org) könyvtár [megfelelő
+parancsával](https://imagemagick.org/script/command-line-options.php#deskew)
+megpróbáltam automatikusan kiegyenesíteni a képet (némelyik picit ferde
+volt eredetileg), hátha ez is segíti a későbbi felismerést. A kód:
 
 ``` r
-img <- magick::image_read_pdf("./input/Kimutatas-2002.pdf")
+img <- magick::image_read_pdf(paste0("Kimutatas-", ev, ".pdf"))
 
-for(i in seq_len(pdftools::pdf_info("Kimutatas-2002.pdf")$pages)) {
+for(i in seq_len(pdftools::pdf_info(paste0("Kimutatas-", ev, ".pdf"))$pages)) {
   print(i)
   magick::image_write(
     magick::image_deskew(image.Otsu::image_otsu(img[i])),
-    paste0("./Kimutatas-2002-png/Kimutatas-2002-", i, ".png"))
+    paste0("./Kimutatas-", ev, "-png/Kimutatas-", ev, "-", i, ".png"))
 }
 ```
 
@@ -319,36 +329,44 @@ táblázat van.) A következő prompt-ot használtam:
 > in the third column. Provide the response in CSV format. Use ; as a
 > column separator.
 
-A felismerés egyetlen nehézsége, hogy lassan fut le egy kérés, de mivel
-ezek teljesen függetlenek egymástól, így beküldhetünk párhuzamosítva
-egyszerre többet:
+Elsőként be kell állítani az API-kulcsot:
+
+``` r
+gemini.R::setAPI("<API-kulcs>")
+```
+
+A felismerés egyetlen nehézsége, hogy kicsit lassan fut le egy kérés, de
+mivel ezek teljesen függetlenek egymástól, így beküldhetünk
+párhuzamosítva egyszerre többet:
 
 ``` r
 promptstring <- readLines("prompt.txt")
 
 cl <- parallel::makeCluster(parallel::detectCores() - 1)
-parallel::clusterExport(cl, "promptstring")
+parallel::clusterExport(cl, c("promptstring", "ev"))
 
 RawData <- parallel::parLapply(
-  cl, seq_len(length(list.files("./Kimutatas-2002-png/"))), function(i)
-    gemini.R::gemini_image(list.files(
-      "./Kimutatas-2002-png/", full.names = TRUE)[i], promptstring,
-      "2.5-pro", maxOutputTokens = 65536))
+  cl, seq_len(length(list.files(paste0("./Kimutatas-", ev, "-png/")))),
+  function(i) gemini.R::gemini_image(list.files(
+    paste0("./Kimutatas-", ev, "-png/"), full.names = TRUE)[i],
+    promptstring, "3-pro-preview", maxOutputTokens = 65536))
 
 parallel::stopCluster(cl)
 ```
 
-Azt tapasztaltam, hogy egy dolgot kell ellenőrizni: néha a lista pár
-eleme egyszerűen `NULL` maradt. De mivel úgy tűnik ez csak valamilyen
-egyszeri probléma volt, így egy sima újra-futtatás megoldja:
+Néha előfordult, hogy a lista pár eleme egyszerűen `NULL` maradt. De
+mivel úgy tűnik ez csak valamilyen egyszeri probléma volt, így egy sima
+újra-futtatás megoldja:
 
 ``` r
+which(sapply(RawData, is.null))
 for(i in which(sapply(RawData, is.null))) {
   print(i)
   RawData[[i]] <- gemini.R::gemini_image(list.files(
-    "./Kimutatas-2002-png/", full.names = TRUE)[i], promptstring, "2.5-pro",
-    maxOutputTokens = 65536)
+    paste0("./Kimutatas-", ev, "-png/"), full.names = TRUE)[i],
+    promptstring, "3-pro-preview", maxOutputTokens = 65536)
 }
+which(sapply(RawData, is.null))
 ```
 
 Ezután jöhetett a visszakapott eredmény (egy lista, melynek minden eleme
@@ -356,36 +374,33 @@ egy oldal) feldolgozása:
 
 ``` r
 RawData2 <- lapply(1:length(RawData), function(i) {
-  res <- RawData[[i]]
+  res <- RawData[[i]][1]
   res <- gsub("```csv\n", "", res)
   res <- gsub("\n```", "", res)
   res <- cbind(fread(res, sep = ";", dec = ",", quote = "",
                      keepLeadingZeros = TRUE, header = FALSE),
                file = sapply(strsplit(sapply(strsplit(
-                 list.files("./Kimutatas-2002-png/"), "-"), `[[`, 3), ".",
-                 fixed = TRUE), `[[`, 1)[i])
-  # if(i == 10) res <- setNames(cbind(res[, 1:4], res[, 5], res[,5:20]),
-  #                             c(paste0("V", 1:20), "file"))
+                 list.files(paste0("./Kimutatas-", ev, "-png/")), "-"),
+                 `[[`, 3), ".", fixed = TRUE), `[[`, 1)[i])
   res
 })
 ```
-
-(A kikommentezett sor azért kell, mert 2002-ben volt egy kép, aminél nem
-bírtam elérni, hogy egy oszlop ne legyen duplikálódva.)
 
 Egy egyszerű ellenőrzési lehetőség, hogy megnézzük, minden táblának 21
 oszlopa van-e. Ha nem, bizonyos esetekben elég egy újra-futtatás:
 
 ``` r
+which(sapply(RawData2, ncol) != 21)
 for(i in which(sapply(RawData2, ncol) != 21)) {
   print(i)
   RawData[[i]] <- gemini.R::gemini_image(list.files(
-    "./Kimutatas-2002-png/", full.names = TRUE)[i], promptstring, "2.5-pro",
-    maxOutputTokens = 65536)
+    paste0("./Kimutatas-", ev, "-png/"), full.names = TRUE)[i],
+    promptstring, "3-pro-preview", maxOutputTokens = 65536)
 }
 ```
 
-Ezután persze újra el kell végeznünk a beolvasást:
+Ha erre sor került, akkor ezután persze újra el kell végeznünk a
+beolvasást:
 
 ``` r
 RawData2 <- lapply(1:length(RawData), function(i) {
@@ -395,18 +410,18 @@ RawData2 <- lapply(1:length(RawData), function(i) {
   res <- cbind(fread(res, sep = ";", dec = ",", quote = "",
                      keepLeadingZeros = TRUE, header = FALSE),
                file = sapply(strsplit(sapply(strsplit(
-                 list.files("./Kimutatas-2002-png/"), "-"), `[[`, 3), ".",
-                 fixed = TRUE), `[[`, 1)[i])
-  # if(i == 10) res <- setNames(cbind(res[, 1:4], res[, 5], res[,5:20]),
-  #                             c(paste0("V", 1:20), "file"))
+                 list.files(paste0("./Kimutatas-", ev, "-png/")), "-"),
+                 `[[`, 3), ".", fixed = TRUE), `[[`, 1)[i])
   res
 })
+which(sapply(RawData2, ncol) != 21)
 ```
 
-Végezetül elmentjük az eredményt:
+Most, hogy ezekkel az ellenőrzésekkel minden rendben, elmentjük az
+eredményt:
 
 ``` r
-saveRDS(RawData2, "./rawdata/RawData2-2002.rds")
+saveRDS(RawData2, paste0("./rawdata/RawData2-", ev, ".rds"))
 ```
 
 E ponton hadd szúrjak be egy általános megjegyzést. Az AI-os
@@ -420,7 +435,7 @@ Töltsük be a fájlt, és végezzük el a fenti két ellenőrzést, hogy
 megerősítsük, hogy ezek valóban rendben vannak:
 
 ``` r
-RawData2 <- readRDS("./rawdata/RawData2-2002.rds")
+RawData2 <- readRDS(paste0("./rawdata/RawData2-", ev, ".rds"))
 which(sapply(RawData2, ncol) != 21)
 ```
 
@@ -432,10 +447,16 @@ which(sapply(RawData2, is.null))
 
     ## integer(0)
 
-Amint látható, az eredmények átmentek az ellenőrzéseken.
+Amint látható, az eredmények valóban átmentek az ellenőrzéseken.
 
-A további feldolgozáshoz fűzzük össze a listát egyetlen nagy
-adattáblává:
+Emlékezzünk rá, hogy az `ev` változó értéke 2002, tehát a lenti
+output-ok a 2002-es évre vonatkoznak, de a kód hasonlóan végrehajtható
+az összes évre. Most megmutatom a 2002-es év feldolgozását részleteiben,
+utána pedig egyben, automatikusan fogjuk lefuttatni az egész kódot az
+összes évre.
+
+Első képésben a további feldolgozáshoz fűzzük össze a listát egyetlen
+nagy adattáblává:
 
 ``` r
 RawData2 <- rbindlist(RawData2)
@@ -445,12 +466,16 @@ Pár oszlop nem numerikusra van állítva, de ez csak beállítás kérdése, az
 adattartalom rendben van, úgyhogy alakítsuk át numerikussá:
 
 ``` r
-RawData2$V9 <- as.numeric(RawData2$V9)
-RawData2$V10 <- as.numeric(RawData2$V10)
-RawData2$V18 <- as.numeric(RawData2$V18)
-RawData2$V19 <- as.numeric(RawData2$V19)
-RawData2$V20 <- as.numeric(RawData2$V20)
+RawData2$V9 <- as.numeric(gsub(",", ".", RawData2$V9))
+RawData2$V10 <- as.numeric(gsub(",", ".", RawData2$V10))
+RawData2$V18 <- as.numeric(gsub(",", ".", RawData2$V18))
+RawData2$V19 <- as.numeric(gsub(",", ".", RawData2$V19))
+RawData2$V20 <- as.numeric(gsub(",", ".", RawData2$V20))
 ```
+
+A `gsub`-ok azért jönnek jól, mert néhány esetben azt tapasztaltam, hogy
+a visszaadott szövegben vessző maradt a tizedeselválasztó, nem pont. A
+fenti megoldás robusztus, mert mindkét esetre működik.
 
 A következő ellenőrzési lépés annak vizsgálata, hogy melyek azok a
 kórházak, ahol nem szerepel „Aktív betegellátó osztályok összesen” sor.
@@ -463,7 +488,9 @@ stopline <- c("Aktív betegell. oszt. együtt",
               "Aktív betegeil. oszt. együtt",
               "Aktív betegell. öszt. együtt",
               "Aktív betgell. oszt. együtt",
-              "Aktív betegek. oszt. együtt")
+              "Aktív betegek. oszt. együtt",
+              "Aktív betegell, oszt. együtt")
+
 RawData2[V2 %in% RawData2[, .(sum(V4 %in% stopline)), .(V2)][V1==0]$V2, 1:4]
 ```
 
@@ -477,9 +504,9 @@ RawData2[V2 %in% RawData2[, .(sum(V4 %in% stopline)), .(V2)][V1==0]$V2, 1:4]
 | Sirály Eü. Szolg. KHT., Székesfehérvár | 0711 | 23 | Tartós ápolás |
 | Sirály Eü. Szolg. KHT., Székesfehérvár | 0711 | NA | Krónikus osztályok együtt |
 | Sirály Eü. Szolg. KHT., Székesfehérvár | 0711 | NA | Összesen |
-| Reform. Egyh. K.I.M.M. Drogreh. Otthona, Räckeresztúr | 0796 | 18 | Elmegyógyászat |
-| Reform. Egyh. K.I.M.M. Drogreh. Otthona, Räckeresztúr | 0796 | NA | Krónikus osztályok együtt |
-| Reform. Egyh. K.I.M.M. Drogreh. Otthona, Räckeresztúr | 0796 | NA | Összesen |
+| Reform. Egyh. K.I.M.M. Drogrehab. Otthona, Ráckeresztúr | 0796 | 18 | Elmegyógyászat |
+| Reform. Egyh. K.I.M.M. Drogrehab. Otthona, Ráckeresztúr | 0796 | NA | Krónikus osztályok együtt |
+| Reform. Egyh. K.I.M.M. Drogrehab. Otthona, Ráckeresztúr | 0796 | NA | Összesen |
 | HOSPIT KKT, Hajdúnánás | 0973 | 23 | Tartós ápolás |
 | HOSPIT KKT, Hajdúnánás | 0973 | NA | Krónikus osztályok együtt |
 | HOSPIT KKT, Hajdúnánás | 0973 | NA | Összesen |
@@ -525,6 +552,7 @@ RawData2[V2 %in% RawData2[, .(sum(V4 %in% stopline)), .(V2)][V1==0]$V2, 1:4]
 | Megyei Rehabilitációs Kórház és Gyógyfürdő, Szentgotthárd | 1807 | NA | Összesen |
 | Megyei Rehabilitációs Kórház és Gyógyfürdő, Szentgotthárd | 1807 | NA | Nappali, éjszakai szanatórium |
 | Megyei Hollós István Szocioterápiás Pszichiátriai KH., Doba | 1910 | 18 | Elmegyógyászat |
+| Megyei Hollós István Szocioterápiás Pszichiátriai KH., Doba | 1910 | NA | Krónikus osztályok együtt |
 | Megyei Hollós István Szocioterápiás Pszichiátriai KH., Doba | 1910 | NA | Összesen |
 | Alkohol-Drogsegély Ambulancia, Veszprém | 1940 | 18 | Elmegyógyászat |
 | Alkohol-Drogsegély Ambulancia, Veszprém | 1940 | NA | Krónikus osztályok együtt |
@@ -598,13 +626,14 @@ Ezek után kimenthetjük az adatok releváns részét, tehát az összegzősort
 
 ``` r
 fwrite(RawData2[, .SD[1:which(V4 %in% stopline)[1]], .(V2)],
-       "./rawdata/RawData2-2002-original.csv",
+       paste0("./rawdata/RawData2-", ev, "-original.csv"),
        dec = ",", sep =";", bom = TRUE)
 ```
 
-Ez után jöhet az adatok ellenőrzése: megnyitottam a
-`RawData2-2002-original.csv` fájlt, és kézzel javítottam benne a
-hibákat. De mik a hibák? A következő ellenőrzéseket tudjuk elvégezni.
+Ez után jöhet az adatok ellenőrzése: meg kell nyitni a
+`RawData2-2002-original.csv` fájlt, és kézzel javítani benne az
+esetleges hibák. De mik lehetnek a hibák? A következő ellenőrzéseket
+tudjuk gépi úton elvégezni.
 
 Az első és legfontosabb, hogy megnézzük, hogy az összegzősorban lévő
 érték valóban a felette lévő értékek összege-e:
@@ -617,37 +646,17 @@ RawData2[, as.list(sum(abs(colSums(
 
 <div class="kable-table">
 
-| V2   |      V1 |
-|:-----|--------:|
-| 0701 |  1065.0 |
-| 0702 |     0.2 |
-| 0703 |  2000.0 |
-| 0801 |     2.0 |
-| 0940 |     6.0 |
-| 1001 |     5.0 |
-| 1002 |     0.9 |
-| 1003 |     1.0 |
-| 1201 |    30.0 |
-| 1309 |     0.1 |
-| 1401 |     0.2 |
-| 1402 |     0.1 |
-| 1501 |   100.0 |
-| 1505 |    37.2 |
-| 0115 |  2000.0 |
-| 1901 |    50.0 |
-| 1908 |     2.0 |
-| 0140 |     0.2 |
-| 0152 |     0.0 |
-| 0155 |    10.0 |
-| 9512 |     3.1 |
-| 0201 | 87621.0 |
-| 0204 |     6.0 |
-| 0205 |     3.0 |
-| 0242 |  1598.0 |
-| 0305 |     4.0 |
-| 0501 |  2000.0 |
-| 0503 |     0.2 |
-| 0506 |     0.2 |
+| V2   |  V1 |
+|:-----|----:|
+| 0702 | 0.2 |
+| 1309 | 0.1 |
+| 1401 | 0.2 |
+| 1402 | 0.1 |
+| 0140 | 0.2 |
+| 0152 | 0.0 |
+| 9512 | 0.1 |
+| 0503 | 0.2 |
+| 0506 | 0.2 |
 
 </div>
 
@@ -669,14 +678,14 @@ RawData2[V2 == "0703", as.list(rbind(.SD, abs(
 | V1 | V2 | V3 | V4 | V5 | V6 | V7 | V8 | V9 | V10 | V11 | V12 | V13 | V14 | V15 | V16 | V17 | V18 | V19 | V20 | file |
 |:---|:---|:---|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|:---|
 | Városi KH-RI, Mór | 0703 | 01 | Belgyógyászat | 45 | 45 | 45 | 0 | 45 | 45 | 1714 | 1512 | 88 | 114 | 0 | 16425 | 13699 | 7.99 | 83.40 | 6.65 | 114 |
-| Városi KH-RI, Mór | 0703 | 02 | Sebészet | 45 | 45 | 45 | 0 | 45 | 45 | 1648 | 1564 | 72 | 12 | 0 | 18425 | 8687 | 5.27 | 52.89 | 0.73 | 114 |
+| Városi KH-RI, Mór | 0703 | 02 | Sebészet | 45 | 45 | 45 | 0 | 45 | 45 | 1648 | 1564 | 72 | 12 | 0 | 16425 | 8687 | 5.27 | 52.89 | 0.73 | 114 |
 | Városi KH-RI, Mór | 0703 | 04 | Szülészet-nőgyógyászat | 30 | 30 | 30 | 0 | 30 | 30 | 1468 | 1432 | 36 | 0 | 3 | 10950 | 6817 | 4.64 | 62.26 | 0.00 | 114 |
 | Városi KH-RI, Mór | 0703 |  | Aktív betegell. oszt. együtt | 120 | 120 | 120 | 0 | 120 | 120 | 4830 | 4508 | 196 | 126 | 3 | 43800 | 29203 | 6.05 | 66.67 | 2.61 | 114 |
 | Városi KH-RI, Mór | 0703 | 21 | Utókezelő | 50 | 50 | 50 | 0 | 50 | 50 | 422 | 328 | 29 | 65 | 0 | 18250 | 13389 | 31.08 | 73.36 | 15.40 | 114 |
 | Városi KH-RI, Mór | 0703 |  | Krónikus osztályok együtt | 50 | 50 | 50 | 0 | 50 | 50 | 422 | 328 | 29 | 65 | 0 | 18250 | 13389 | 31.08 | 73.36 | 15.40 | 114 |
 | Városi KH-RI, Mór | 0703 |  | Összesen | 170 | 170 | 170 | 0 | 170 | 170 | 5252 | 4836 | 225 | 191 | 3 | 62050 | 42592 | 8.06 | 68.64 | 3.64 | 114 |
 | Városi KH-RI, Mór | 0703 |  | Újszülött | 12 | 12 | 12 | 0 | 12 | 12 | 459 | 459 | 0 | 0 | 0 | 4380 | 2142 | 4.67 | 48.90 | 0.00 | 114 |
-| NA | NA | NA | NA | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2000 | 0 | NA | NA | NA | NA |
+| NA | NA | NA | NA | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | NA | NA | NA | NA |
 
 </div>
 
@@ -687,84 +696,23 @@ következő pontban egyesével is összegyűjtöm, hogy dokumentálva legyen
 milyen alapon hagytam benne olyan adatokat a táblázatban, ahol nem
 stimmel az összegzés.
 
-A másik dolog, amit meg kell nézni, a hiányzó adatok előfordulása, hogy
-hol vannak hiányzó adatok, illetve, hogy mi hiányzik:
+Ha ez az ellenőrzés megvan, akkor az összegzősorokat elhagyhatjuk:
 
 ``` r
-apply(RawData2, 2, function(x) sum(is.na(x)))
+RawData2 <- RawData2[, .SD[1:(which(V4 %in% stopline)[1] - 1)], .(V2)]
 ```
 
-    ##   V1   V2   V3   V4   V5   V6   V7   V8   V9  V10  V11  V12  V13  V14  V15  V16 
-    ##    0    0   62    0    0    6    0    0    0   18    0    0    0    0    0    7 
-    ##  V17  V18  V19  V20 file 
-    ##    1    4   20    1    0
-
-``` r
-RawData2[is.na(V6)]
-```
-
-<div class="kable-table">
-
-| V1 | V2 | V3 | V4 | V5 | V6 | V7 | V8 | V9 | V10 | V11 | V12 | V13 | V14 | V15 | V16 | V17 | V18 | V19 | V20 | file |
-|:---|:---|:---|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|:---|
-| Magyarországi Református Egyház Bethesda Gyermekkórháza, Bp. | 0123 | 02 | Sebészet | 29 | NA | 29 | 0 | 31 | 31 | 2071 | 2036 | 34 | 1 | 0 | NA | 7990 | 3.86 | 70.65 | 0.05 | 25 |
-| Magyarországi Református Egyház Bethesda Gyermekkórháza, Bp. | 0123 | 05 | Csecs.- és gyermekgyógy. | 111 | NA | 111 | 0 | 111 | 111 | 4107 | 4034 | 67 | 6 | 0 | NA | 24392 | 5.94 | 60.20 | 0.15 | 25 |
-| Magyarországi Református Egyház Bethesda Gyermekkórháza, Bp. | 0123 | 06 | Fül-orr-gégészet | 20 | NA | 20 | 0 | 20 | 20 | 1824 | 1821 | 3 | 0 | 0 | NA | 3705 | 2.03 | 50.75 | 0.00 | 25 |
-| Magyarországi Református Egyház Bethesda Gyermekkórháza, Bp. | 0123 | 15 | Intenzív betegellátó | 11 | NA | 11 | 0 | 9 | 9 | 214 | 61 | 143 | 10 | 0 | NA | 1574 | 7.36 | 47.83 | 4.67 | 25 |
-| Magyarországi Református Egyház Bethesda Gyermekkórháza, Bp. | 0123 |  | Aktív betegell. oszt. együtt | 171 | NA | 171 | 0 | 171 | 171 | 8216 | 7952 | 247 | 17 | 0 | NA | 37661 | 4.58 | 60.34 | 0.21 | 25 |
-| Magyarországi Református Egyház Bethesda Gyermekkórháza, Bp. | 0123 |  | Összesen | 171 | NA | 171 | 0 | 171 | 171 | 8216 | 7952 | 247 | 17 | 0 | NA | 37661 | 4.58 | 60.34 | 0.21 | 25 |
-
-</div>
-
-Ezek szintén potenciálisan javítandó hibák lehetnek, de itt is igaz,
-hogy nem mindegyik az (előfordulhat, hogy az adat ténylegesen hiányzik a
-kimutatás táblázatában is); ezeket ugyanúgy a következő pontban
-dokumentáltam.
-
-Miután végeztem a fenti hibajavításokkal, a javított fájlt elmentettem
-`RawData2-2002-corrected.csv` néven. (Igen, tudom, hogy ez ilyen
-formában nem reprodukálható lépés, de egy `diff` a két fájl között úgyis
-kiadja, hogy miket módosítottam.)
-
-Töltsük be ezt a fájlt:
-
-``` r
-RawData2 <- fread("./rawdata/RawData2-2002-corrected.csv", keepLeadingZeros = TRUE)
-```
-
-Majd ellenőrizzük, hogy ebben már valóban nincs hiba:
-
-``` r
-RawData2[, as.list(sum(abs(
-  colSums(.SD[1:(which(V4 %in% stopline)[1] - 1), 4:16]) -
-    .SD[which(V4 %in% stopline)[1]][, 4:16]), na.rm = TRUE)), .(V2)][V1 != 0]
-```
-
-<div class="kable-table">
-
-| V2   |   V1 |
-|:-----|-----:|
-| 0701 | 25.0 |
-| 0702 |  0.2 |
-| 1309 |  0.1 |
-| 1401 |  0.2 |
-| 1402 |  0.1 |
-| 0140 |  0.2 |
-| 0152 |  0.0 |
-| 9512 |  0.1 |
-| 0503 |  0.2 |
-| 0506 |  0.2 |
-
-</div>
+A másik dolog, amit ezután már ellenőrizhetünk, a hiányzó adatok
+előfordulása, hogy hol vannak hiányzó adatok, illetve, hogy mi hiányzik:
 
 ``` r
 apply(RawData2, 2, function(x) sum(is.na(x)))
 ```
 
     ##   V2   V1   V3   V4   V5   V6   V7   V8   V9  V10  V11  V12  V13  V14  V15  V16 
-    ##    0    0  145    0    0    0    0    0    0    0    0    0    0    0    0    0 
+    ##    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
     ##  V17  V18  V19  V20 file 
-    ##    0    3    3    0    0
+    ##    0    5    3    0    0
 
 ``` r
 RawData2[is.na(V18)]
@@ -773,10 +721,12 @@ RawData2[is.na(V18)]
 <div class="kable-table">
 
 | V2 | V1 | V3 | V4 | V5 | V6 | V7 | V8 | V9 | V10 | V11 | V12 | V13 | V14 | V15 | V16 | V17 | V18 | V19 | V20 | file |
-|:---|:---|---:|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1102 | Megyei Önkormányzat Vaszary Kolos Kórház, Esztergom | 17 | Felvételi osztály | 5 | 5 | 5 | 0 | 5 | 5 | 0 | 0 | 0 | 0 | 0 | 1825 | 0 | NA | 0 | 0 | 141 |
-| 1801 | Megyei Markusovszky Kórház, Szombathely | 17 | Felvételi osztály | 8 | 0 | 0 | 8 | 8 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | NA | NA | 0 | 199 |
-| 9511 | MÁV Kórház, Budapest | 17 | Felvételi osztály | 10 | 0 | 0 | 10 | 10 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | NA | NA | 0 | 52 |
+|:---|:---|:---|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|:---|
+| 1102 | Megyei Önkormányzat Vaszary Kolos Kórház, Esztergom | 17 | Felvételi osztály | 5 | 5 | 5 | 0 | 5.0 | 5.0 | 0 | 0 | 0 | 0 | 0 | 1825 | 0 | NA | 0 | 0 | 141 |
+| 1505 | Sz-Sz-B M. Önk. Szatmár-Beregi KH Fehérgyarmat-Vásárosnamény |  | Árvíz szükség osztály | 0 | 0 | 0 | 0 | 37.2 | 37.2 | 0 | 0 | 0 | 0 | 0 | 13572 | 0 | NA | 0 | 0 | 181 |
+| 1801 | Megyei Markusovszky Kórház, Szombathely | 17 | Felvételi osztály | 8 | 0 | 0 | 8 | 8.0 | 0.0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | NA | NA | 0 | 199 |
+| 2203 | Szent Ferenc KH., Budapest | 02 | Sebészet | 20 | 20 | 20 | 0 | 20.0 | 20.0 | 0 | 0 | 0 | 0 | 0 | 7300 | 0 | NA | 0 | 0 | 45 |
+| 9511 | MÁV Kórház, Budapest | 17 | Felvételi osztály | 10 | 0 | 0 | 10 | 10.0 | 0.0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | NA | NA | 0 | 52 |
 
 </div>
 
@@ -787,115 +737,257 @@ RawData2[is.na(V19)]
 <div class="kable-table">
 
 | V2 | V1 | V3 | V4 | V5 | V6 | V7 | V8 | V9 | V10 | V11 | V12 | V13 | V14 | V15 | V16 | V17 | V18 | V19 | V20 | file |
-|:---|:---|---:|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+|:---|:---|:---|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|:---|
 | 1801 | Megyei Markusovszky Kórház, Szombathely | 17 | Felvételi osztály | 8 | 0 | 0 | 8 | 8 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | NA | NA | 0.00 | 199 |
-| 1804 | Dr. Batthyány Strattmann Lászlo Kórház, Körmend | 90 | Mátrix intézet | 0 | 0 | 0 | 0 | 0 | 0 | 7 | 1 | 1 | 5 | 0 | 0 | 228 | 32.57 | NA | 71.43 | 201 |
+| 1804 | Dr. Batthyány Strattmann László Kórház, Körmend | 90 | Mátrix intézet | 0 | 0 | 0 | 0 | 0 | 0 | 7 | 1 | 1 | 5 | 0 | 0 | 228 | 32.57 | NA | 71.43 | 201 |
 | 9511 | MÁV Kórház, Budapest | 17 | Felvételi osztály | 10 | 0 | 0 | 10 | 10 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | NA | NA | 0.00 | 52 |
 
 </div>
 
-Látjuk, hogy csak ott nem stimmel az összegzősor, ami a – következő
-pontban dokumentált módon – nem valódi probléma, és csak ott van
-adathiány, ahol – következő pontban dokumentált módon – tényleges
-adathiány van a táblázatban is.
+Ezek szintén potenciálisan javítandó hibák lehetnek, de itt is igaz,
+hogy nem mindegyik az (előfordulhat, hogy az adat ténylegesen hiányzik a
+kimutatás táblázatában is); ezeket ugyanúgy a következő pontban
+dokumentáltam.
 
-Ezek után már rászűrhetünk csak a részletező sorokra, és kidobhatjuk a
-`file` oszlopot amire többé már nem lesz szükség (eddig is csak a
-képfájl kikeresését gyorsította):
+Ha szükségessé vált hibajavítás, akkor a módosított fájlt
+`RawData2-2002-corrected.csv` néven mentjük el. (Igen, tudom, hogy ez
+ilyen formában nem reprodukálható lépés, de egy `diff` a két fájl között
+úgyis kiadja, hogy miket módosítottam.)
+
+Töltsük be ezt a fájlt:
+
+``` r
+RawData2 <- fread("./rawdata/RawData2-2002-corrected.csv", keepLeadingZeros = TRUE)
+```
+
+Ha szeretnénk, a biztonság kedvéért visszaellenőrizhetjük, hogy ebben
+már valóban nincs hiba:
+
+``` r
+RawData2[, as.list(sum(abs(
+  colSums(.SD[1:(which(V4 %in% stopline)[1] - 1), 4:16]) -
+    .SD[which(V4 %in% stopline)[1]][, 4:16]), na.rm = TRUE)), .(V2)][V1 != 0]
+```
+
+<div class="kable-table">
+
+| V2   |  V1 |
+|:-----|----:|
+| 0702 | 0.2 |
+| 1309 | 0.1 |
+| 1401 | 0.2 |
+| 1402 | 0.1 |
+| 0140 | 0.2 |
+| 0152 | 0.0 |
+| 9512 | 0.1 |
+| 0503 | 0.2 |
+| 0506 | 0.2 |
+
+</div>
 
 ``` r
 RawData2 <- RawData2[, .SD[1:(which(V4 %in% stopline)[1] - 1)], .(V2)]
-RawData2$file <- NULL
+apply(RawData2, 2, function(x) sum(is.na(x)))
 ```
 
-Állítsunk be rendes – természetesen a korábbi projektben használt, 2003
-utáni adatokkal egyező! – oszlopneveket:
+    ##   V2   V1   V3   V4   V5   V6   V7   V8   V9  V10  V11  V12  V13  V14  V15  V16 
+    ##    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
+    ##  V17  V18  V19  V20 file 
+    ##    0    5    3    0    0
 
 ``` r
-colnames(RawData2) <- c(
-  "KorhazRovid", "Korhaz", "SzakmaKod", "SzakmaMegnev", "OsszesAgy",
-  "MukodoIAgy", "MukodoIIAgy", "TartoSzuneteloAgy",
-  "OsszesAtlagAgy", "MukodoAtlagAgy", "ElbocsatottBetegSzam",
-  "EltavozottBetegSzam", "MasOsztalyBetegSzam",
-  "MeghaltBetegSzam", "EgynaposEsetSzam",
-  "TeljesithetoApolasiNapSzam","TeljesitettApolasiNapSzam",
-  "ApolasAtlTartam", "Agykihasznalas", "Halalozas"
-)
+RawData2[is.na(V18)]
+```
+
+<div class="kable-table">
+
+| V2 | V1 | V3 | V4 | V5 | V6 | V7 | V8 | V9 | V10 | V11 | V12 | V13 | V14 | V15 | V16 | V17 | V18 | V19 | V20 | file |
+|:---|:---|:---|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1102 | Megyei Önkormányzat Vaszary Kolos Kórház, Esztergom | 17 | Felvételi osztály | 5 | 5 | 5 | 0 | 5.0 | 5.0 | 0 | 0 | 0 | 0 | 0 | 1825 | 0 | NA | 0 | 0 | 141 |
+| 1505 | Sz-Sz-B M. Önk. Szatmár-Beregi KH Fehérgyarmat-Vásárosnamény |  | Árvíz szükség osztály | 0 | 0 | 0 | 0 | 37.2 | 37.2 | 0 | 0 | 0 | 0 | 0 | 13572 | 0 | NA | 0 | 0 | 181 |
+| 1801 | Megyei Markusovszky Kórház, Szombathely | 17 | Felvételi osztály | 8 | 0 | 0 | 8 | 8.0 | 0.0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | NA | NA | 0 | 199 |
+| 2203 | Szent Ferenc KH., Budapest | 02 | Sebészet | 20 | 20 | 20 | 0 | 20.0 | 20.0 | 0 | 0 | 0 | 0 | 0 | 7300 | 0 | NA | 0 | 0 | 45 |
+| 9511 | MÁV Kórház, Budapest | 17 | Felvételi osztály | 10 | 0 | 0 | 10 | 10.0 | 0.0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | NA | NA | 0 | 52 |
+
+</div>
+
+``` r
+RawData2[is.na(V19)]
+```
+
+<div class="kable-table">
+
+| V2 | V1 | V3 | V4 | V5 | V6 | V7 | V8 | V9 | V10 | V11 | V12 | V13 | V14 | V15 | V16 | V17 | V18 | V19 | V20 | file |
+|:---|:---|:---|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1801 | Megyei Markusovszky Kórház, Szombathely | 17 | Felvételi osztály | 8 | 0 | 0 | 8 | 8 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | NA | NA | 0.00 | 199 |
+| 1804 | Dr. Batthyány Strattmann László Kórház, Körmend | 90 | Mátrix intézet | 0 | 0 | 0 | 0 | 0 | 0 | 7 | 1 | 1 | 5 | 0 | 0 | 228 | 32.57 | NA | 71.43 | 201 |
+| 9511 | MÁV Kórház, Budapest | 17 | Felvételi osztály | 10 | 0 | 0 | 10 | 10 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | NA | NA | 0.00 | 52 |
+
+</div>
+
+Látjuk, hogy tényleg csak ott nem stimmel az összegzősor, ami a –
+következő pontban dokumentált módon – nem valódi probléma, és csak ott
+van adathiány, ahol – következő pontban dokumentált módon – tényleges
+adathiány van a táblázatban is.
+
+Ez volt a folyamat illusztrációja, amit minden évre meg kell csinálnunk.
+Ha végeztünk, és meg vannak a javított fájlok, akkor dolgozzuk fel az
+összeset!
+
+Ennek során kidobhatjuk a `file` oszlopot, amire többé már nem lesz
+szükség (eddig is csak a képfájl kikeresését gyorsította), valamint
+rakjuk hozzá új oszlopként az évet, további állítsunk be rendes –
+természetesen a korábbi projektben használt, 2003 utáni adatokkal
+egyező! – oszlopneveket. Itt egyedül arra kell vigyázni, hogy 2002 előtt
+más volt az oszlopok sorrendje (és sajnos kis részt a tartalma is, tehát
+más adatok szerepeltek, de szerencsére a legtöbb oszlop megvan minden
+évre):
+
+``` r
+res <- rbindlist(lapply(2001:2002, function(ev) {
+  temp <- fread(paste0("./rawdata/RawData2-", ev, "-corrected.csv"), keepLeadingZeros = TRUE)
+  temp <- temp[, .SD[1:(which(V4 %in% stopline)[1] - 1)], .(V2)]
+  temp$file <- NULL
+  temp$Ev <- ev
+  colnames(temp) <- if(ev == 2002) c(
+    "KorhazRovid", "Korhaz", "SzakmaKod", "SzakmaMegnev", "OsszesAgy",
+    "MukodoIAgy", "MukodoIIAgy", "TartoSzuneteloAgy",
+    "OsszesAtlagAgy", "MukodoAtlagAgy", "ElbocsatottBetegSzam",
+    "EltavozottBetegSzam", "MasOsztalyBetegSzam",
+    "MeghaltBetegSzam", "EgynaposEsetSzam",
+    "TeljesithetoApolasiNapSzam","TeljesitettApolasiNapSzam",
+    "ApolasAtlTartam", "Agykihasznalas", "Halalozas", "Ev"
+  ) else c(
+    "KorhazRovid", "Korhaz", "SzakmaKod", "SzakmaMegnev", "OsszesAgy",
+    "MukodoIAgy", "MukodoIIAgy", "TartoSzuneteloAgy",
+    "Kiesett6HonapnalHosszabb", "Kiesett6HonapnalRovidebb", 
+    "TeljesithetoApolasiNapSzam", "ElbocsatottBetegSzam",
+    "EltavozottBetegSzam", "MasOsztalyBetegSzam",
+    "MeghaltBetegSzam", "EgynaposEsetSzam",
+    "TeljesitettApolasiNapSzam",
+    "ApolasAtlTartam", "Agykihasznalas", "Halalozas", "Ev"
+  )
+  temp
+}), fill = TRUE)
 ```
 
 Nézzük meg hogyan sikerült a szakmák neveinek felismerése:
 
 ``` r
-as.data.table(table(RawData2$SzakmaKod, RawData2$SzakmaMegnev))[N != 0][order(V1)]
+res[, .N, .(SzakmaKod, SzakmaMegnev)][order(SzakmaKod)]
 ```
 
 <div class="kable-table">
 
-| V1  | V2                           |   N |
-|:----|:-----------------------------|----:|
-| 1   | Belgyógyászat                | 111 |
-| 1   | Belgyógyógyászat             |   1 |
-| 10  | Ortopédia                    |  26 |
-| 11  | Urológia                     |  46 |
-| 12  | Onkológia, onkoradiológia    |  33 |
-| 13  | Fog- és szájsebészet         |  19 |
-| 14  | Reumatológia                 |  32 |
-| 15  | Intenzív betegellátó         |  97 |
-| 16  | Fertőző betegellátó          |  25 |
-| 17  | Felvételi osztály            |  22 |
-| 18  | Elmegyógyászat               |  58 |
-| 19  | Tüdőgyógyászat               |  32 |
-| 2   | Sebészet                     |  98 |
-| 3   | Traumatológia                |  57 |
-| 4   | Szülészet-nőgyógyászat       |  91 |
-| 5   | Csec.- és gyermekgyógy.      |   1 |
-| 5   | Csecş.- és gyermekgyógy.     |   1 |
-| 5   | Csecs,- és gyermekgyógy.     |   2 |
-| 5   | Csecs.- és gyermekgyógy.     |  68 |
-| 5   | Csecs.- és gyermekgyógyászat |   1 |
-| 5   | Csecse- és gyermekgyógy.     |   1 |
-| 5   | Csecsemő- és gyermekgyógy.   |   5 |
-| 5   | Csecsemő,- és gyermekgyógy.  |   1 |
-| 6   | Fül-orr-gégészet             |  68 |
-| 7   | Szemészet                    |  58 |
-| 8   | Bőr- és nemibeteg            |  28 |
-| 9   | Ideggyógyászat               |  71 |
-| 90  | Mátrix intézet               |  10 |
-| 91  | Belgyógyászati típusú mátrix |   2 |
-| 92  | Sebészeti típusú mátrix      |   9 |
+| SzakmaKod | SzakmaMegnev                 |   N |
+|:----------|:-----------------------------|----:|
+|           | Árvíz szükség osztály        |   2 |
+| 01        | Belgyógyászat                | 227 |
+| 02        | Sebészet                     | 196 |
+| 03        | Traumatológia                | 116 |
+| 04        | Szülészet-nőgyógyászat       | 183 |
+| 05        | Csecs.- és gyermekgyógy.     | 153 |
+| 05        | Csecs.- és gyermekgyógy      |   1 |
+| 05        | Csecs - és gyermekgyógy.     |   1 |
+| 05        | Csecs,- és gyermekgyógy.     |   3 |
+| 05        | Csecs- és gyermekgyógy.      |   1 |
+| 05        | Csecsemő- és gyermekgyógy.   |   1 |
+| 06        | Fül-orr-gégészet             | 137 |
+| 07        | Szemészet                    | 116 |
+| 08        | Bőr- és nemibeteg            |  56 |
+| 09        | Ideggyógyászat               | 142 |
+| 10        | Ortopédia                    |  52 |
+| 11        | Urológia                     |  92 |
+| 12        | Onkológia, onkoradiológia    |  66 |
+| 13        | Fog- és szájsebészet         |  38 |
+| 14        | Reumatológia                 |  64 |
+| 15        | Intenzív betegellátó         | 192 |
+| 15        | Intenziv betegellátó         |   2 |
+| 16        | Fertőző betegellátó          |  50 |
+| 17        | Felvételi osztály            |  42 |
+| 18        | Elmegyógyászat               | 116 |
+| 19        | Tüdőgyógyászat               |  65 |
+| 90        | Mátrix intézet               |  16 |
+| 91        | Belgyógyászati típusú mátrix |   2 |
+| 92        | Sebészeti tipusú mátrix      |   1 |
+| 92        | Sebészeti típusú mátrix      |  15 |
 
 </div>
 
-Egész jó a helyzet, mindössze két elnevezést kell javítani, illetve
+Az elírások abból látszódnak, ha valahol ugyanazon kódhoz különböző
+nevek tartoznak (reméljük persze, hogy a kódban nincsen
+félre-felismerés):
+
+``` r
+as.data.table(table(res$SzakmaKod, res$SzakmaMegnev))[N != 0][
+  duplicated(V1) | duplicated(V1, fromLast = TRUE)]
+```
+
+<div class="kable-table">
+
+| V1  | V2                         |   N |
+|:----|:---------------------------|----:|
+| 05  | Csecs- és gyermekgyógy.    |   1 |
+| 05  | Csecs - és gyermekgyógy.   |   1 |
+| 05  | Csecs,- és gyermekgyógy.   |   3 |
+| 05  | Csecs.- és gyermekgyógy    |   1 |
+| 05  | Csecs.- és gyermekgyógy.   | 153 |
+| 05  | Csecsemő- és gyermekgyógy. |   1 |
+| 15  | Intenziv betegellátó       |   2 |
+| 15  | Intenzív betegellátó       | 192 |
+| 92  | Sebészeti tipusú mátrix    |   1 |
+| 92  | Sebészeti típusú mátrix    |  15 |
+
+</div>
+
+Egész jó a helyzet, csak néhány elnevezést kell javítani, illetve
 egységesíteni:
 
 ``` r
-RawData2[SzakmaKod == "1"]$SzakmaMegnev <- "Belgyógyászat"
-RawData2[SzakmaKod == "5"]$SzakmaMegnev <- "Csecsemő- és gyermekgyógyászat"
+res[SzakmaKod == "05"]$SzakmaMegnev <- "Csecsemő- és gyermekgyógyászat"
+res[SzakmaKod == "15"]$SzakmaMegnev <- "Intenzív betegellátó"
+res[SzakmaKod == "92"]$SzakmaMegnev <- "Sebészeti típusú mátrix"
 ```
 
-Még egy ellenőrzési lehetőséget ad az, ha összehasonlítjuk a közölt, és
-a kézzel kiszámolható halálozási arányokat:
+Megnézhetjük még azt is, hogy ugyanahhoz a kórházkódhoz tartozik-e egy
+éven belül különböző név (vigyázat, különböző években nyugodtan
+tartozhat különböző név, hiszen a kórházakat neveznek néha át):
 
 ``` r
-plot(RawData2$MeghaltBetegSzam / RawData2$ElbocsatottBetegSzam * 100,
-     RawData2$Halalozas)
+res[, .(length(unique(Korhaz))) , .(KorhazRovid, Ev)][V1 > 1]
+```
+
+<div class="kable-table">
+
+| KorhazRovid |  Ev |  V1 |
+|:------------|----:|----:|
+
+</div>
+
+Még egy, más jellegű ellenőrzési lehetőséget ad az, ha összehasonlítjuk
+a közölt, és a kézzel kiszámolható halálozási arányokat:
+
+``` r
+plot(res$MeghaltBetegSzam / res$ElbocsatottBetegSzam * 100, res$Halalozas)
 abline(0,1)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
 
 ``` r
-cor(RawData2$MeghaltBetegSzam / RawData2$ElbocsatottBetegSzam * 100,
-    RawData2$Halalozas, use = "complete.obs")
+max(abs(res$MeghaltBetegSzam / res$ElbocsatottBetegSzam * 100 -
+          res$Halalozas), na.rm = TRUE)
 ```
 
-    ## [1] 0.9999999
+    ## [1] 0.005
 
 Mivel minden stimmel, mentsük ki az eredményeket:
 
 ``` r
-openxlsx2::write_xlsx(RawData2, "./output/RawData-2002.xlsx")
+saveRDS(res, "./output/ferenci-tamas-korhaz-agyszam-betegforgalom-2003elott.rds")
+fwrite(res, "./output/ferenci-tamas-korhaz-agyszam-betegforgalom-2003elott.csv",
+       sep = ";", dec = ",", row.names = FALSE, bom = TRUE)
+openxlsx2::write_xlsx(res, "./output/ferenci-tamas-korhaz-agyszam-betegforgalom-2003elott.xlsx")
 ```
 
 ## Adatbeolvasási megállapítások
@@ -908,11 +1000,25 @@ az adathiány mögött. A következőkben a teljesség és transzparencia
 kedvéért ezeket dokumentálom, megadva a kórház azonosítóját, és annak
 magyarázatát, hogy miért nem igényelt javítást az eltérés.
 
+### 2001
+
+Összegzési eltérések: nem volt ilyen.
+
+Adathiányok:
+
+- 1102: tényleges adathiány a 17-es szakmában az átlagos ápolási
+  időtartamnál és az ágykihasználásnál
+- 1801: tényleges adathiány a 17-es szakmában az átlagos ápolási
+  időtartamnál és az ágykihasználásnál
+- 9511: tényleges adathiány a 17-es szakmában az átlagos ápolási
+  időtartamnál és az ágykihasználásnál
+- 0402: tényleges adathiány a 13-as szakmában az átlagos ápolási
+  időtartamnál
+
 ### 2002
 
 Összegzési eltérések:
 
-- 0701: tényleg hibás az összeg (462 430 az összeg, 462 455 szerepel)
 - 0702: potenciálisan csak kerekítési hiba
 - 1309: potenciálisan csak kerekítési hiba
 - 1401: potenciálisan csak kerekítési hiba
@@ -932,3 +1038,7 @@ Adathiányok:
 - 1102: tényleges adathiány a 17-es szakmában az átlagos ápolási
   időtartamnál
 - 1804: tényleges adathiány a 90-es szakmában az ágykihasználásnál
+- 2203: tényleges adathiány a 02-es szakmában az átlagos ápolási
+  időtartamnál
+- 1505: tényleges adathiány az „Árvíz szükség osztály” szakmában az
+  átlagos ápolási időtartamnál

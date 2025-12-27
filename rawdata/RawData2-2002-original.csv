@@ -24,18 +24,18 @@
 0602;Városi Erzsébet KH-RI, Hódmezővásárhely;12;Onkológia, onkoradiológia;20;20;20;0;20;20;682;600;3;79;0;7300;5811;8,52;79,6;11,58;103
 0602;Városi Erzsébet KH-RI, Hódmezővásárhely;14;Reumatológia;45;45;45;0;45;45;1345;1332;13;0;0;16425;16409;12,2;99,9;0;103
 0602;Városi Erzsébet KH-RI, Hódmezővásárhely;15;Intenzív betegellátó;6;6;6;0;6;6;386;95;215;76;0;2190;1798;4,66;82,1;19,69;103
-0602;Városi Erzsébet KH-RI, Hódmezővásárhely;"";Aktív betegell. oszt. együtt;330;330;330;0;330;330;12496;11348;779;369;0;120450;91870;7,35;76,27;2,95;103
-0603;Szeged Megyei Jogú Város Önkormányzati Kórháza;01;Belgyógyászat;139;139;139;0;139;139;5427;4244;806;377;71;50735;43648;8,04;86,03;6,95;104
-0603;Szeged Megyei Jogú Város Önkormányzati Kórháza;02;Sebészet;50;50;50;0;50;50;2207;1984;186;37;3;18250;14311;6,48;78,42;1,68;104
-0603;Szeged Megyei Jogú Város Önkormányzati Kórháza;03;Traumatológia;40;40;40;0;40;40;1596;1486;91;19;21;14600;10796;6,76;73,95;1,19;104
-0603;Szeged Megyei Jogú Város Önkormányzati Kórháza;04;Szülészet-nőgyógyászat;50;50;50;0;50;50;3037;3014;23;0;1171;18250;13607;4,48;74,56;0;104
-0603;Szeged Megyei Jogú Város Önkormányzati Kórháza;11;Urológia;60;60;60;0;60;60;2963;2878;56;29;0;21900;16549;5,59;75,57;0,98;104
-0603;Szeged Megyei Jogú Város Önkormányzati Kórháza;12;Onkológia, onkoradiológia;30;30;30;0;30;30;1148;1040;40;68;0;10950;5054;4,4;46,16;5,92;104
-0603;Szeged Megyei Jogú Város Önkormányzati Kórháza;14;Reumatológia;30;30;30;0;30;30;961;958;2;1;0;10950;9807;10,2;89,56;0,1;104
-0603;Szeged Megyei Jogú Város Önkormányzati Kórháza;15;Intenzív betegellátó;10;10;10;0;10;10;604;171;250;183;0;3650;2943;4,87;80,63;30,3;104
-0603;Szeged Megyei Jogú Város Önkormányzati Kórháza;16;Fertőző betegellátó;44;44;44;0;44;44;1473;1404;48;21;0;16060;8661;5,88;53,93;1,43;104
-0603;Szeged Megyei Jogú Város Önkormányzati Kórháza;18;Elmegyógyászat;75;75;75;0;75;75;1662;1067;561;34;0;27375;22565;13,58;82,43;2,05;104
-0603;Szeged Megyei Jogú Város Önkormányzati Kórháza;"";Aktív betegell. oszt. együtt;528;528;528;0;528;528;21078;18246;2063;769;1266;192720;147941;7,02;76,76;3,65;104
+0602;Városi Erzsébet KH-RI, Hódmezővásárhely;"";Aktív betegell, oszt. együtt;330;330;330;0;330;330;12496;11348;779;369;0;120450;91870;7,35;76,27;2,95;103
+0603;Szeged Megyei Jogú Város Önkormányzat Kórháza;01;Belgyógyászat;139;139;139;0;139;139;5427;4244;806;377;71;50735;43648;8,04;86,03;6,95;104
+0603;Szeged Megyei Jogú Város Önkormányzat Kórháza;02;Sebészet;50;50;50;0;50;50;2207;1984;186;37;3;18250;14311;6,48;78,42;1,68;104
+0603;Szeged Megyei Jogú Város Önkormányzat Kórháza;03;Traumatológia;40;40;40;0;40;40;1596;1486;91;19;21;14600;10796;6,76;73,95;1,19;104
+0603;Szeged Megyei Jogú Város Önkormányzat Kórháza;04;Szülészet-nőgyógyászat;50;50;50;0;50;50;3037;3014;23;0;1171;18250;13607;4,48;74,56;0;104
+0603;Szeged Megyei Jogú Város Önkormányzat Kórháza;11;Urológia;60;60;60;0;60;60;2963;2878;56;29;0;21900;16549;5,59;75,57;0,98;104
+0603;Szeged Megyei Jogú Város Önkormányzat Kórháza;12;Onkológia, onkoradiológia;30;30;30;0;30;30;1148;1040;40;68;0;10950;5054;4,4;46,16;5,92;104
+0603;Szeged Megyei Jogú Város Önkormányzat Kórháza;14;Reumatológia;30;30;30;0;30;30;961;958;2;1;0;10950;9807;10,2;89,56;0,1;104
+0603;Szeged Megyei Jogú Város Önkormányzat Kórháza;15;Intenzív betegellátó;10;10;10;0;10;10;604;171;250;183;0;3650;2943;4,87;80,63;30,3;104
+0603;Szeged Megyei Jogú Város Önkormányzat Kórháza;16;Fertőző betegellátó;44;44;44;0;44;44;1473;1404;48;21;0;16060;8661;5,88;53,93;1,43;104
+0603;Szeged Megyei Jogú Város Önkormányzat Kórháza;18;Elmegyógyászat;75;75;75;0;75;75;1662;1067;561;34;0;27375;22565;13,58;82,43;2,05;104
+0603;Szeged Megyei Jogú Város Önkormányzat Kórháza;"";Aktív betegell. oszt. együtt;528;528;528;0;528;528;21078;18246;2063;769;1266;192720;147941;7,02;76,76;3,65;104
 0604;Szeged Megyei Jogú Város Önkormányzat Gyermekkórháza;05;Csecs.- és gyermekgyógy.;78;78;78;0;78;78;3032;3023;9;0;0;28470;21871;7,21;76,82;0;105
 0604;Szeged Megyei Jogú Város Önkormányzat Gyermekkórháza;06;Fül-orr-gégészet;20;20;20;0;20;20;2560;2555;5;0;0;7300;6105;2,38;83,63;0;105
 0604;Szeged Megyei Jogú Város Önkormányzat Gyermekkórháza;15;Intenzív betegellátó;6;6;6;0;6;6;127;82;43;2;0;2190;1797;14,15;82,05;1,57;105
@@ -49,7 +49,7 @@
 0605;Városi Dr. Diósszilágyi Sámuel KH-RI, Makó;09;Ideggyógyászat;25;25;25;0;25,8;25,8;674;532;87;55;0;9420;6079;9,02;64,53;8,16;106
 0605;Városi Dr. Diósszilágyi Sámuel KH-RI, Makó;15;Intenzív betegellátó;5;5;5;0;5;5;305;121;114;70;0;1825;1293;4,24;70,85;22,95;106
 0605;Városi Dr. Diósszilágyi Sámuel KH-RI, Makó;18;Elmegyógyászat;36;36;36;0;36;36;857;652;187;18;0;13140;13469;15,72;102,5;2,1;106
-0605;Városi Dr. Diósszilágyi Sámuel KH-RI, Makó;"";Aktív betegell. oszt. együtt;256;256;256;0;258,4;258,4;10481;9410;751;320;88;94325;73796;7,04;78,24;3,05;106
+0605;Városi Dr. Diósszilágyi Sámuel KH-RI, Makó;256;Aktív betegell. oszt. együtt;256;256;256;0;258,4;258,4;10481;9410;751;320;88;94325;73796;7,04;78,24;3,05;106
 0606;Csongrád Megyei Önk. Mellkasi Betegségek Szakkórháza, Deszk;19;Tüdőgyógyászat;137;137;137;0;137;137;4581;3983;381;217;0;50005;42594;9,3;85,18;4,74;107
 0606;Csongrád Megyei Önk. Mellkasi Betegségek Szakkórháza, Deszk;;Aktív betegell. oszt. együtt;137;137;137;0;137;137;4581;3983;381;217;0;50005;42594;9,3;85,18;4,74;107
 0643;Szegedi Tudományegyetem;01;Belgyógyászat;233;233;201;0;233;232,2;10871;9982;555;334;66;84757;73333;6,75;86,52;3,07;109
@@ -79,8 +79,8 @@
 0101;Fővárosi Szent Imre KH-RI;19;Tüdőgyógyászat;40;40;40;0;40;40;1122;925;126;71;0;14600;11098;9,89;76,01;6,33;11
 0101;Fővárosi Szent Imre KH-RI;"";Aktív betegell. oszt. együtt;656;618;618;38;658,1;620,1;29197;25672;2612;913;3;226325;192428;6,59;85,02;3,13;11
 0701;Fejér Megyei Szent György Kórház, Székesfehérvár;01;Belgyógyászat;300;300;300;0;300;300;11974;9866;1583;525;1;109500;88736;7,41;81,04;4,38;112
-0701;Fejér Megyei Szent György Kórház, Székesfehérvár;02;Sebészet;126;126;126;0;126;126;6019;5542;393;84;4;45900;34625;5,75;75,29;1,4;112
-0701;Fejér Megyei Szent György Kórház, Székesfehérvár;03;Traumatológia;100;100;100;0;100;100;4447;4148;270;29;4;35500;29028;6,53;79,53;0,65;112
+0701;Fejér Megyei Szent György Kórház, Székesfehérvár;02;Sebészet;126;126;126;0;126;126;6019;5542;393;84;4;45990;34625;5,75;75,29;1,4;112
+0701;Fejér Megyei Szent György Kórház, Székesfehérvár;03;Traumatológia;100;100;100;0;100;100;4447;4148;270;29;4;36500;29028;6,53;79,53;0,65;112
 0701;Fejér Megyei Szent György Kórház, Székesfehérvár;04;Szülészet-nőgyógyászat;110;110;110;0;110;110;5728;5637;79;12;1283;40150;25413;4,44;63,3;0,21;112
 0701;Fejér Megyei Szent György Kórház, Székesfehérvár;05;Csecs.- és gyermekgyógy.;102;102;102;0;102;102;3766;3653;104;9;0;37230;20869;5,54;56,05;0,24;112
 0701;Fejér Megyei Szent György Kórház, Székesfehérvár;06;Fül-orr-gégészet;40;40;40;0;40;40;2807;2720;76;11;1;14600;12112;4,31;82,96;0,39;112
@@ -96,23 +96,23 @@
 0701;Fejér Megyei Szent György Kórház, Székesfehérvár;17;Felvételi osztály;22;22;22;0;22;22;3822;2892;826;104;0;8030;4673;1,22;58,19;2,72;112
 0701;Fejér Megyei Szent György Kórház, Székesfehérvár;18;Elmegyógyászat;85;85;85;0;85;85;1951;767;1165;19;0;31025;27060;13,87;87,22;0,97;112
 0701;Fejér Megyei Szent György Kórház, Székesfehérvár;19;Tüdőgyógyászat;64;64;64;0;64;64;1912;994;809;109;0;23360;22126;11,57;94,72;5,7;112
-0701;Fejér Megyei Szent György Kórház, Székesfehérvár;"";Aktív betegell. oszt. együtt;1267;1267;1267;0;1267;1267;56369;48164;6754;1451;1314;462430;354976;6,3;76,76;2,57;112
-0702;Városi Szent Pantaleon Kórház, Dunaújváros;01;Belgyógyászat;152;152;152;0;153,2;153,2;5873;5085;516;272;0;55904;46661;7,95;83,47;4,63;113
-0702;Városi Szent Pantaleon Kórház, Dunaújváros;02;Sebészet;65;65;65;0;65;65;2466;2254;180;32;0;23725;16408;6,65;69,16;1,3;113
-0702;Városi Szent Pantaleon Kórház, Dunaújváros;03;Traumatológia;50;50;50;0;50;50;1729;1677;39;13;1;18250;12920;7,47;70,79;0,75;113
-0702;Városi Szent Pantaleon Kórház, Dunaújváros;04;Szülészet-nőgyógyászat;59;59;59;0;65,4;65,4;3055;3039;14;2;11;23867;15259;4,99;63,93;0,07;113
-0702;Városi Szent Pantaleon Kórház, Dunaújváros;05;Csecsemő- és gyermekgyógy.;42;42;42;0;42,6;42,6;1730;1710;19;1;1;15542;9459;5,47;60,86;0,06;113
-0702;Városi Szent Pantaleon Kórház, Dunaújváros;06;Fül-orr-gégészet;25;25;25;0;27,9;27,9;1911;1893;8;10;0;10185;7111;3,72;69,82;0,52;113
-0702;Városi Szent Pantaleon Kórház, Dunaújváros;07;Szemészet;24;24;24;0;24,6;24,6;1547;1536;11;0;0;8972;5898;3,81;65,74;0;113
-0702;Városi Szent Pantaleon Kórház, Dunaújváros;09;Ideggyógyászat;50;50;50;0;50;50;2329;2259;47;23;0;18250;18102;7,77;99,19;0,99;113
-0702;Városi Szent Pantaleon Kórház, Dunaújváros;10;Ortopédia;5;5;5;0;5;5;196;194;2;0;0;1825;1372;7;75,18;0;113
-0702;Városi Szent Pantaleon Kórház, Dunaújváros;11;Urológia;24;24;24;0;24,6;24,6;1215;1184;22;9;0;8972;5706;4,7;63,6;0,74;113
-0702;Városi Szent Pantaleon Kórház, Dunaújváros;15;Intenzív betegellátó;12;12;12;0;12;12;752;183;446;123;0;4380;3507;4,66;80,07;16,36;113
-0702;Városi Szent Pantaleon Kórház, Dunaújváros;16;Fertőző betegellátó;30;30;30;0;30;30;1277;1060;164;53;0;10950;11285;8,84;103,1;4,15;113
-0702;Városi Szent Pantaleon Kórház, Dunaújváros;18;Elmegyógyászat;50;50;50;0;50;50;1075;767;292;16;0;18250;19238;17,9;105,4;1,49;113
-0702;Városi Szent Pantaleon Kórház, Dunaújváros;"";Aktív betegell. oszt. együtt;588;588;588;0;600,2;600,2;25155;22841;1760;554;13;219072;172926;6,87;78,94;2,2;113
+0701;Fejér Megyei Szent György Kórház, Székesfehérvár;"";Aktív betegell. oszt. együtt;1267;1267;1267;0;1267;1267;56369;48164;6754;1451;1314;462455;354976;6,3;76,76;2,57;112
+0702;Városl Szent Pantaleon Kórház, Dunaújváros;01;Belgyógyászat;152;152;152;0;153,2;153,2;5873;5085;516;272;0;55904;46661;7,95;83,47;4,63;113
+0702;Városl Szent Pantaleon Kórház, Dunaújváros;02;Sebészet;65;65;65;0;65;65;2466;2254;180;32;0;23725;16408;6,65;69,16;1,3;113
+0702;Városl Szent Pantaleon Kórház, Dunaújváros;03;Traumatológia;50;50;50;0;50;50;1729;1677;39;13;1;18250;12920;7,47;70,79;0,75;113
+0702;Városl Szent Pantaleon Kórház, Dunaújváros;04;Szülészet-nőgyógyászat;59;59;59;0;65,4;65,4;3055;3039;14;2;11;23867;15259;4,99;63,93;0,07;113
+0702;Városl Szent Pantaleon Kórház, Dunaújváros;05;Csecs.- és gyermekgyógy.;42;42;42;0;42,6;42,6;1730;1710;19;1;1;15542;9459;5,47;60,86;0,06;113
+0702;Városl Szent Pantaleon Kórház, Dunaújváros;06;Fül-orr-gégészet;25;25;25;0;27,9;27,9;1911;1893;8;10;0;10185;7111;3,72;69,82;0,52;113
+0702;Városl Szent Pantaleon Kórház, Dunaújváros;07;Szemészet;24;24;24;0;24,6;24,6;1547;1536;11;0;0;8972;5898;3,81;65,74;0;113
+0702;Városl Szent Pantaleon Kórház, Dunaújváros;09;Ideggyógyászat;50;50;50;0;50;50;2329;2259;47;23;0;18250;18102;7,77;99,19;0,99;113
+0702;Városl Szent Pantaleon Kórház, Dunaújváros;10;Ortopédia;5;5;5;0;5;5;196;194;2;0;0;1825;1372;7;75,18;0;113
+0702;Városl Szent Pantaleon Kórház, Dunaújváros;11;Urológia;24;24;24;0;24,6;24,6;1215;1184;22;9;0;8972;5706;4,7;63,6;0,74;113
+0702;Városl Szent Pantaleon Kórház, Dunaújváros;15;Intenzív betegellátó;12;12;12;0;12;12;752;183;446;123;0;4380;3507;4,66;80,07;16,36;113
+0702;Városl Szent Pantaleon Kórház, Dunaújváros;16;Fertőző betegellátó;30;30;30;0;30;30;1277;1060;164;53;0;10950;11285;8,84;103,1;4,15;113
+0702;Városl Szent Pantaleon Kórház, Dunaújváros;18;Elmegyógyászat;50;50;50;0;50;50;1075;767;292;16;0;18250;19238;17,9;105,4;1,49;113
+0702;Városl Szent Pantaleon Kórház, Dunaújváros;"";Aktív betegell. oszt. együtt;588;588;588;0;600,2;600,2;25155;22841;1760;554;13;219072;172926;6,87;78,94;2,2;113
 0703;Városi KH-RI, Mór;01;Belgyógyászat;45;45;45;0;45;45;1714;1512;88;114;0;16425;13699;7,99;83,4;6,65;114
-0703;Városi KH-RI, Mór;02;Sebészet;45;45;45;0;45;45;1648;1564;72;12;0;18425;8687;5,27;52,89;0,73;114
+0703;Városi KH-RI, Mór;02;Sebészet;45;45;45;0;45;45;1648;1564;72;12;0;16425;8687;5,27;52,89;0,73;114
 0703;Városi KH-RI, Mór;04;Szülészet-nőgyógyászat;30;30;30;0;30;30;1468;1432;36;0;3;10950;6817;4,64;62,26;0;114
 0703;Városi KH-RI, Mór;"";Aktív betegell. oszt. együtt;120;120;120;0;120;120;4830;4508;196;126;3;43800;29203;6,05;66,67;2,61;114
 0801;Megyei Petz Aladár Kórház, Győr;01;Belgyógyászat;223;223;223;0;223;223;8715;7495;721;499;1;81395;63023;7,23;77,43;5,73;119
@@ -126,7 +126,7 @@
 0801;Megyei Petz Aladár Kórház, Győr;09;Ideggyógyászat;46;46;46;0;46;46;1823;1368;277;178;0;16790;15092;8,28;89,89;9,76;119
 0801;Megyei Petz Aladár Kórház, Győr;10;Ortopédia;28;28;28;0;28;28;867;854;13;0;0;10220;8466;9,76;82,84;0;119
 0801;Megyei Petz Aladár Kórház, Győr;11;Urológia;40;40;40;0;40;40;2403;2359;24;20;8;14600;10230;4,26;70,07;0,83;119
-0801;Megyei Petz Aladár Kórház, Győr;12;Onkológia, onkoradiológia;73;73;73;0;73;73;2978;2837;32;107;0;26645;13280;4,46;49,84;3,6;119
+0801;Megyei Petz Aladár Kórház, Győr;12;Onkológia, onkoradiológia;73;73;73;0;73;73;2976;2837;32;107;0;26645;13280;4,46;49,84;3,6;119
 0801;Megyei Petz Aladár Kórház, Győr;13;Fog- és szájsebészet;14;14;14;0;14;14;582;576;3;3;0;5110;2995;5,15;58,61;0,52;119
 0801;Megyei Petz Aladár Kórház, Győr;14;Reumatológia;54;54;54;0;54;54;1306;1302;4;0;0;19710;17256;13,21;87,55;0;119
 0801;Megyei Petz Aladár Kórház, Győr;15;Intenzív betegellátó;20;20;20;0;20;20;674;217;332;125;6;7300;4266;6,33;58,44;18,55;119
@@ -157,7 +157,7 @@
 0803;Városi Karolina KH-RI, Mosonmagyaróvár;02;Sebészet;35;35;35;0;35;35;1709;1556;136;17;0;12775;10198;5,97;79,83;0,99;121
 0803;Városi Karolina KH-RI, Mosonmagyaróvár;03;Traumatológia;22;22;22;0;22;22;1248;1189;56;3;0;8030;6107;4,89;76,05;0,24;121
 0803;Városi Karolina KH-RI, Mosonmagyaróvár;04;Szülészet-nőgyógyászat;30;30;30;0;30;30;1943;1927;16;0;9;10950;9821;5,05;89,69;0;121
-0803;Városi Karolina KH-RI, Mosonmagyaróvár;05;Csecsemő,- és gyermekgyógy.;20;20;20;0;20;20;851;850;1;0;0;7300;4267;5,01;58,45;0;121
+0803;Városi Karolina KH-RI, Mosonmagyaróvár;05;Csecs.- és gyermekgyógy.;20;20;20;0;20;20;851;850;1;0;0;7300;4267;5,01;58,45;0;121
 0803;Városi Karolina KH-RI, Mosonmagyaróvár;15;Intenzív betegellátó;6;6;6;0;6;6;269;28;204;37;0;2190;929;3,45;42,42;13,75;121
 0803;Városi Karolina KH-RI, Mosonmagyaróvár;19;Tüdőgyógyászat;30;30;30;0;30;30;753;591;118;44;0;10950;8316;11,04;75,95;5,84;121
 0803;Városi Karolina KH-RI, Mosonmagyaróvár;"";Aktív betegell. oszt. együtt;227;227;227;0;227;227;9972;9086;593;293;9;82855;64318;6,45;77,63;2,94;121
@@ -201,26 +201,26 @@
 0902;Területi Kórház, Berettyóújfalu;18;Elmegyógyászat;70;70;70;0;70;70;1516;1275;215;26;0;25550;24120;15,91;94,4;1,72;128
 0902;Területi Kórház, Berettyóújfalu;19;Tüdőgyógyászat;46;46;46;0;46;46;923;827;56;40;0;16790;13323;14,43;79,35;4,33;128
 0902;Területi Kórház, Berettyóújfalu;"";Aktív betegell. oszt. együtt;533;533;533;0;533;533;21273;19570;1330;373;25;194545;152808;7,18;78,55;1,75;128
-0940;Debrecen Tudomany Egyetem;01;Belgyógyászat;470;470;470;0;468;468;26381;24184;1823;374;1;170826;159735;6,05;93,51;1,42;129
-0940;Debrecen Tudomany Egyetem;02;Sebészet;307;307;307;0;307;307;15451;11683;3675;93;9;112055;81514;5,28;72,74;0,6;129
-0940;Debrecen Tudomany Egyetem;03;Traumatológia;52;52;52;0;52;47,7;1960;1909;42;9;0;17406;10963;5,59;62,98;0,46;129
-0940;Debrecen Tudomany Egyetem;04;Szülészet-nőgyógyászat;151;151;151;0;151;151;10495;9486;1008;1;2127;55115;43516;4,15;78,95;0,01;129
-0940;Debrecen Tudomany Egyetem;05;Csecs.- és gyermekgyógy.;111;105;105;6;111;106,2;5560;4530;991;39;0;38768;37244;6,7;96,07;0,7;129
-0940;Debrecen Tudomany Egyetem;06;Fül-orr-gégészet;60;60;60;0;62;62;3321;3294;22;5;0;22624;15056;4,53;66,55;0,15;129
-0940;Debrecen Tudomany Egyetem;07;Szemészet;80;80;80;0;80;80;4352;4320;31;1;0;29200;22395;5,15;76,7;0,02;129
-0940;Debrecen Tudomany Egyetem;08;Bőr- és nemibeteg;58;58;58;0;58;54,2;2475;2397;75;3;0;19788;15796;6,38;79,84;0,12;129
-0940;Debrecen Tudomany Egyetem;09;Ideggyógyászat;55;55;55;0;55;55;2049;1871;127;51;0;20075;17106;8,35;85,21;2,49;129
-0940;Debrecen Tudomany Egyetem;10;Ortopédia;49;49;49;0;49;37,3;2141;2084;56;1;2;13605;14852;6,94;109,2;0,05;129
-0940;Debrecen Tudomany Egyetem;11;Urológia;52;52;52;0;52;52;4568;4503;54;11;1032;18980;18669;4,09;98,36;0,24;129
-0940;Debrecen Tudomany Egyetem;12;Onkológia, onkoradiológia;116;116;116;0;116;116;5533;5122;293;118;9;42340;27590;4,99;65,16;2,13;129
-0940;Debrecen Tudomany Egyetem;13;Fog- és szájsebészet;20;20;20;0;20;20;1129;1119;7;3;0;7300;4502;3,99;61,67;0,27;129
-0940;Debrecen Tudomany Egyetem;14;Reumatológia;20;20;20;0;20;20;793;762;29;2;0;7300;4661;5,88;63,85;0,25;129
-0940;Debrecen Tudomany Egyetem;15;Intenzív betegellátó;130;130;130;0;130;130;10811;956;9198;657;1;47450;34971;3,23;73,7;6,08;129
-0940;Debrecen Tudomany Egyetem;16;Fertőző betegellátó;30;30;30;0;30;30;1436;1423;13;0;0;10950;6447;4,49;58,88;0;129
-0940;Debrecen Tudomany Egyetem;17;Felvételi osztály;10;10;10;0;10;10;544;495;47;2;0;3650;552;1,01;15,12;0,37;129
-0940;Debrecen Tudomany Egyetem;18;Elmegyógyászat;34;34;34;0;34;34;643;438;202;3;0;12410;11925;18,55;96,09;0,47;129
-0940;Debrecen Tudomany Egyetem;19;Tüdőgyógyászat;50;50;50;0;50;50;1761;1443;229;89;0;18250;17606;10;96,47;5,05;129
-0940;Debrecen Tudomany Egyetem;"";Aktív betegell. oszt. együtt;1855;1849;1849;6;1855;1830,4;101403;82019;17922;1462;3181;668086;545100;5,38;81,59;1,44;129
+0940;Debrecen Tudomány Egyetem;01;Belgyógyászat;470;470;470;0;468;468;26381;24184;1823;374;1;170826;159735;6,05;93,51;1,42;129
+0940;Debrecen Tudomány Egyetem;02;Sebészet;307;307;307;0;307;307;15451;11683;3675;93;9;112055;81514;5,28;72,74;0,6;129
+0940;Debrecen Tudomány Egyetem;03;Traumatológia;52;52;52;0;52;47,7;1960;1909;42;9;0;17406;10963;5,59;62,98;0,46;129
+0940;Debrecen Tudomány Egyetem;04;Szülészet-nőgyógyászat;151;151;151;0;151;151;10495;9486;1008;1;2127;55115;43516;4,15;78,95;0,01;129
+0940;Debrecen Tudomány Egyetem;05;Csecs.- és gyermekgyógy.;111;105;105;6;111;106,2;5560;4530;991;39;0;38766;37244;6,7;96,07;0,7;129
+0940;Debrecen Tudomány Egyetem;06;Fül-orr-gégészet;60;60;60;0;62;62;3321;3294;22;5;0;22624;15056;4,53;66,55;0,15;129
+0940;Debrecen Tudomány Egyetem;07;Szemészet;80;80;80;0;80;80;4352;4320;31;1;0;29200;22395;5,15;76,7;0,02;129
+0940;Debrecen Tudomány Egyetem;08;Bőr- és nemibeteg;58;58;58;0;58;54,2;2475;2397;75;3;0;19784;15796;6,38;79,84;0,12;129
+0940;Debrecen Tudomány Egyetem;09;Ideggyógyászat;55;55;55;0;55;55;2049;1871;127;51;0;20075;17106;8,35;85,21;2,49;129
+0940;Debrecen Tudomány Egyetem;10;Ortopédia;49;49;49;0;49;37,3;2141;2084;56;1;2;13605;14852;6,94;109,2;0,05;129
+0940;Debrecen Tudomány Egyetem;11;Urológia;52;52;52;0;52;52;4568;4503;54;11;1032;18980;18669;4,09;98,36;0,24;129
+0940;Debrecen Tudomány Egyetem;12;Onkológia, onkoradiológia;116;116;116;0;116;116;5533;5122;293;118;9;42340;27590;4,99;65,16;2,13;129
+0940;Debrecen Tudomány Egyetem;13;Fog- és szájsebészet;20;20;20;0;20;20;1129;1119;7;3;0;7300;4502;3,99;61,67;0,27;129
+0940;Debrecen Tudomány Egyetem;14;Reumatológia;20;20;20;0;20;20;793;762;29;2;0;7300;4661;5,88;63,85;0,25;129
+0940;Debrecen Tudomány Egyetem;15;Intenzív betegellátó;130;130;130;0;130;130;10811;956;9198;657;1;47450;34971;3,23;73,7;6,08;129
+0940;Debrecen Tudomány Egyetem;16;Fertőző betegellátó;30;30;30;0;30;30;1436;1423;13;0;0;10950;6447;4,49;58,88;0;129
+0940;Debrecen Tudomány Egyetem;17;Felvételi osztály;10;10;10;0;10;10;544;495;47;2;0;3650;552;1,01;15,12;0,37;129
+0940;Debrecen Tudomány Egyetem;18;Elmegyógyászat;34;34;34;0;34;34;643;438;202;3;0;12410;11925;18,55;96,09;0,47;129
+0940;Debrecen Tudomány Egyetem;19;Tüdőgyógyászat;50;50;50;0;50;50;1761;1443;229;89;0;18250;17606;10;96,47;5,05;129
+0940;Debrecen Tudomány Egyetem;"";Aktív betegell. oszt. együtt;1855;1849;1849;6;1855;1830,4;101403;82019;17922;1462;3181;668086;545100;5,38;81,59;1,44;129
 0106;Fővárosi Szent János KH-RI;01;Belgyógyászat;230;230;230;0;230;230;8674;7486;838;350;13;83950;64854;7,48;77,25;4,04;13
 0106;Fővárosi Szent János KH-RI;02;Sebészet;148;148;148;0;142,2;142,2;5980;5546;339;95;14;51906;38964;6,52;75,07;1,59;13
 0106;Fővárosi Szent János KH-RI;03;Traumatológia;150;150;150;0;150;150;5757;5327;388;42;21;54750;37328;6,48;68,18;0,73;13
@@ -253,14 +253,14 @@
 1001;Megyei Markoth Ferenc Kórház, Eger;16;Fertőző betegellátó;40;40;40;0;40;40;1007;937;56;14;0;14600;7346;7,29;50,32;1,39;133
 1001;Megyei Markoth Ferenc Kórház, Eger;17;Felvételi osztály;8;8;8;0;8;8;2638;1663;922;53;0;2920;2639;1;90,38;2,01;133
 1001;Megyei Markoth Ferenc Kórház, Eger;18;Elmegyógyászat;80;80;80;0;80;80;2067;1846;201;20;0;29200;26056;12,61;89,23;0,97;133
-1001;Megyei Markoth Ferenc Kórház, Eger;1002;Aktív betegell. oszt. együtt;997;997;997;5;1002;992,2;40848;37149;2578;1121;1123;362165;269424;6,6;74,39;2,74;133
+1001;Megyei Markoth Ferenc Kórház, Eger;"";Aktív betegell. oszt. együtt;1002;997;997;5;1002;992,2;40848;37149;2578;1121;1123;362165;269424;6,6;74,39;2,74;133
 1002;Városi Bugát Pál Kórház, Gyöngyös;01;Belgyógyászat;133;133;133;0;133;133;7044;6093;652;299;6;48545;48694;6,91;100,3;4,24;134
 1002;Városi Bugát Pál Kórház, Gyöngyös;02;Sebészet;55;55;55;0;55;55;2533;2342;158;33;18;20075;16618;6,56;82,78;1,3;134
 1002;Városi Bugát Pál Kórház, Gyöngyös;04;Szülészet-nőgyógyászat;60;60;60;0;60;60;3376;3349;26;1;343;21900;16989;5,03;77,58;0,03;134
 1002;Városi Bugát Pál Kórház, Gyöngyös;05;Csecs.- és gyermekgyógy.;25;25;25;0;25;25;1012;1005;7;0;0;9125;5675;5,61;62,19;0;134
 1002;Városi Bugát Pál Kórház, Gyöngyös;06;Fül-orr-gégészet;20;20;20;0;20;20;1548;1517;20;11;0;7300;5857;3,78;80,23;0,71;134
 1002;Városi Bugát Pál Kórház, Gyöngyös;07;Szemészet;20;20;20;0;20;20;1286;1262;24;0;0;7300;5382;4,19;73,73;0;134
-1002;Városi Bugát Pál Kórház, Gyöngyös;09;Ideggyógyászat;20;10;10;10;20;9,9;468;443;20;5;0;3290;2990;6,39;90,88;1,07;134
+1002;Városi Bugát Pál Kórház, Gyöngyös;09;Ideggyógyászat;20;10;10;10;20;9;468;443;20;5;0;3290;2990;6,39;90,88;1,07;134
 1002;Városi Bugát Pál Kórház, Gyöngyös;15;Intenzív betegellátó;8;8;8;0;8;8;286;76;146;64;0;2920;1631;5,7;55,86;22,38;134
 1002;Városi Bugát Pál Kórház, Gyöngyös;18;Elmegyógyászat;75;75;75;0;75;75;1889;1584;265;40;0;27375;26308;13,93;96,1;2,12;134
 1002;Városi Bugát Pál Kórház, Gyöngyös;"";Aktív betegell. oszt. együtt;416;406;406;10;416;405;19442;17671;1318;453;367;147830;130144;6,69;88,04;2,33;134
@@ -269,13 +269,13 @@
 1003;Városi Albert Schweitzer Kórház, Hatvan;03;Traumatológia;60;60;60;0;60;60;2691;2530;130;31;6;21900;14671;5,45;66,99;1,15;135
 1003;Városi Albert Schweitzer Kórház, Hatvan;04;Szülészet-nőgyógyászat;30;30;30;0;30;30;1999;1993;5;1;330;10950;7963;3,98;72,72;0,05;135
 1003;Városi Albert Schweitzer Kórház, Hatvan;05;Csecs.- és gyermekgyógy.;30;30;30;0;30;30;1487;1486;1;0;0;10950;7070;4,75;64,57;0;135
-1003;Városi Albert Schweitzer Kórház, Hatvan;07;Szemészet;20;20;20;0;20;20;1105;1093;12;1;1;7300;4991;4,52;68,37;0;135
+1003;Városi Albert Schweitzer Kórház, Hatvan;07;Szemészet;20;20;20;0;20;20;1105;1093;12;0;1;7300;4991;4,52;68,37;0;135
 1003;Városi Albert Schweitzer Kórház, Hatvan;08;Bőr- és nemibeteg;15;15;15;0;15;15;620;586;34;0;0;5475;5564;8,97;101,6;0;135
 1003;Városi Albert Schweitzer Kórház, Hatvan;09;Ideggyógyászat;30;30;30;0;30;30;693;626;55;12;0;10950;6669;9,62;60,9;1,73;135
 1003;Városi Albert Schweitzer Kórház, Hatvan;15;Intenzív betegellátó;8;8;8;0;8;8;386;78;242;66;0;2920;1761;4,56;60,31;17,1;135
 1003;Városi Albert Schweitzer Kórház, Hatvan;"";Aktív betegell. oszt. együtt;333;333;333;0;333;333;14543;13170;950;423;337;121545;90554;6,23;74,5;2,91;135
-1057;Mátrai Állami Gyógyintézet, Mátraháza;19;Tüdőgyógyászat;160;160;160;0;160;160;3917;3701;137;79;0;58400;39845;10,17;68,23;2,02;137
-1057;Mátrai Állami Gyógyintézet, Mátraháza;;Aktív betegek. oszt. együtt;160;160;160;0;160;160;3917;3701;137;79;0;58400;39845;10,17;68,23;2,02;137
+1057;Mátral Állami Gyógyintézet, Mátraháza;19;Tüdőgyógyászat;160;160;160;0;160;160;3917;3701;137;79;0;58400;39845;10,17;68,23;2,02;137
+1057;Mátral Állami Gyógyintézet, Mátraháza;;Aktív betegell. oszt. együtt;160;160;160;0;160;160;3917;3701;137;79;0;58400;39845;10,17;68,23;2,02;137
 0107;Fővárosi Szent Margit KH-RI;01;Belgyógyászat;220;220;220;0;220;220;7009;5994;680;335;1;80300;65294;9,32;81,31;4,78;14
 0107;Fővárosi Szent Margit KH-RI;02;Sebészet;54;54;54;0;54;54;1933;1631;271;31;34;19710;12253;6,34;62,17;1,6;14
 0107;Fővárosi Szent Margit KH-RI;04;Szülészet-nőgyógyászat;70;70;70;0;70;70;4756;4716;39;1;432;25550;20134;4,23;78,8;0,02;14
@@ -284,19 +284,19 @@
 0107;Fővárosi Szent Margit KH-RI;12;Onkológia, onkoradiológia;55;55;55;0;55;55;2840;2642;72;126;0;20075;17323;6,1;86,29;4,44;14
 0107;Fővárosi Szent Margit KH-RI;15;Intenzív betegellátó;6;6;6;0;6;6;328;22;236;70;0;2190;1010;3,08;46,12;21,34;14
 0107;Fővárosi Szent Margit KH-RI;"";Aktív betegell. oszt. együtt;460;460;460;0;460;460;18423;16473;1347;603;467;167900;133586;7,25;79,56;3,27;14
-1101;Megyei Szent Borbála Kórház, Tatabánya;01;Belgyógyászat;165;165;165;0;165;165;6116;5145;550;421;0;60225;51365;8,4;85,29;6,88;140
-1101;Megyei Szent Borbála Kórház, Tatabánya;02;Sebészet;86;86;86;0;86;86;3825;3190;541;94;1;31390;26155;6,84;83,32;2,46;140
-1101;Megyei Szent Borbála Kórház, Tatabánya;03;Traumatológia;62;62;62;0;62;62;2703;2538;123;42;1;22630;17549;6,49;77,55;1,55;140
-1101;Megyei Szent Borbála Kórház, Tatabánya;04;Szülészet-nőgyógyászat;65;65;65;0;65;65;4364;4334;28;2;1;23725;18502;4,24;77,99;0,05;140
-1101;Megyei Szent Borbála Kórház, Tatabánya;05;Csecs.- és gyermekgyógy.;65;65;65;0;65;65;2939;2928;1;10;0;23725;18672;6,35;78,7;0,34;140
-1101;Megyei Szent Borbála Kórház, Tatabánya;06;Fül-orr-gégészet;26;26;26;0;26;26;1582;1552;19;11;2;9490;7051;4,46;74,3;0,7;140
-1101;Megyei Szent Borbála Kórház, Tatabánya;07;Szemészet;24;24;24;0;24;24;2623;2611;12;0;89;8760;5512;2,1;62,92;0;140
-1101;Megyei Szent Borbála Kórház, Tatabánya;09;Ideggyógyászat;68;68;68;0;68;68;2448;2019;155;274;0;24820;16828;6,87;67,8;11,19;140
-1101;Megyei Szent Borbála Kórház, Tatabánya;11;Urológia;25;25;25;0;25;25;1471;1422;41;8;0;9125;7675;5,22;84,11;0,54;140
-1101;Megyei Szent Borbála Kórház, Tatabánya;15;Intenzív betegellátó;12;8;8;4;12;8;423;36;286;101;0;2920;2400;5,67;82,19;23,88;140
-1101;Megyei Szent Borbála Kórház, Tatabánya;18;Elmegyógyászat;70;70;70;0;70;70;1808;827;951;30;0;25550;26080;14,42;102,1;1,66;140
-1101;Megyei Szent Borbála Kórház, Tatabánya;19;Tüdőgyógyászat;48;48;48;0;48;48;1038;674;287;77;0;17520;13515;13,02;77,14;7,42;140
-1101;Megyei Szent Borbála Kórház, Tatabánya;"";Aktív betegell. oszt. együtt;716;712;712;4;716;712;31340;27276;2994;1070;94;259880;211304;6,74;81,31;3,41;140
+1101;Megyei Szent Borbála Kórház,Tatabánya;01;Belgyógyászat;165;165;165;0;165;165;6116;5145;550;421;0;60225;51365;8,4;85,29;6,88;140
+1101;Megyei Szent Borbála Kórház,Tatabánya;02;Sebészet;86;86;86;0;86;86;3825;3190;541;94;1;31390;26155;6,84;83,32;2,46;140
+1101;Megyei Szent Borbála Kórház,Tatabánya;03;Traumatológia;62;62;62;0;62;62;2703;2538;123;42;1;22630;17549;6,49;77,55;1,55;140
+1101;Megyei Szent Borbála Kórház,Tatabánya;04;Szülészet-nőgyógyászat;65;65;65;0;65;65;4364;4334;28;2;1;23725;18502;4,24;77,99;0,05;140
+1101;Megyei Szent Borbála Kórház,Tatabánya;05;Csecs.- és gyermekgyógy.;65;65;65;0;65;65;2939;2928;1;10;0;23725;18672;6,35;78,7;0,34;140
+1101;Megyei Szent Borbála Kórház,Tatabánya;06;Fül-orr-gégészet;26;26;26;0;26;26;1582;1552;19;11;2;9490;7051;4,46;74,3;0,7;140
+1101;Megyei Szent Borbála Kórház,Tatabánya;07;Szemészet;24;24;24;0;24;24;2623;2611;12;0;89;8760;5512;2,1;62,92;0;140
+1101;Megyei Szent Borbála Kórház,Tatabánya;09;Ideggyógyászat;68;68;68;0;68;68;2448;2019;155;274;0;24820;16828;6,87;67,8;11,19;140
+1101;Megyei Szent Borbála Kórház,Tatabánya;11;Urológia;25;25;25;0;25;25;1471;1422;41;8;0;9125;7675;5,22;84,11;0,54;140
+1101;Megyei Szent Borbála Kórház,Tatabánya;15;Intenzív betegellátó;12;8;8;4;12;8;423;36;286;101;0;2920;2400;5,67;82,19;23,88;140
+1101;Megyei Szent Borbála Kórház,Tatabánya;18;Elmegyógyászat;70;70;70;0;70;70;1808;827;951;30;0;25550;26080;14,42;102,1;1,66;140
+1101;Megyei Szent Borbála Kórház,Tatabánya;19;Tüdőgyógyászat;48;48;48;0;48;48;1038;674;287;77;0;17520;13515;13,02;77,14;7,42;140
+1101;Megyei Szent Borbála Kórház,Tatabánya;"";Aktív betegell. oszt. együtt;716;712;712;4;716;712;31340;27276;2994;1070;94;259880;211304;6,74;81,31;3,41;140
 1102;Megyei Önkormányzat Vaszary Kolos Kórház, Esztergom;01;Belgyógyászat;110;110;110;0;110;110;4636;4157;225;254;0;40150;37075;8;92,34;5,48;141
 1102;Megyei Önkormányzat Vaszary Kolos Kórház, Esztergom;02;Sebészet;48;48;48;0;48;48;1955;1781;129;45;0;17520;12917;6,61;73,73;2,3;141
 1102;Megyei Önkormányzat Vaszary Kolos Kórház, Esztergom;03;Traumatológia;32;32;32;0;32;32;1570;1497;66;7;0;11680;10054;6,4;86,08;0,45;141
@@ -310,8 +310,8 @@
 1102;Megyei Önkormányzat Vaszary Kolos Kórház, Esztergom;17;Felvételi osztály;5;5;5;0;5;5;0;0;0;0;0;1825;0;;0;0;141
 1102;Megyei Önkormányzat Vaszary Kolos Kórház, Esztergom;18;Elmegyógyászat;50;50;50;0;50;50;1258;970;257;31;0;18250;23154;18,41;126,9;2,46;141
 1102;Megyei Önkormányzat Vaszary Kolos Kórház, Esztergom;"";Aktív betegell. oszt. együtt;445;445;445;0;445;445;18918;17353;1046;519;923;162425;143218;7,57;88,17;2,74;141
-1103;Városi Rehab. Szakkórház, Tata;01;Belgyógyászat;60;60;60;0;60;60;2177;2009;51;117;0;21900;17935;8,24;81,89;5,37;142
-1103;Városi Rehab. Szakkórház, Tata;"";Aktív betegell. oszt. együtt;60;60;60;0;60;60;2177;2009;51;117;0;21900;17935;8,24;81,89;5,37;142
+1103;Városl Rehab. Szakkórház, Tata;01;Belgyógyászat;60;60;60;0;60;60;2177;2009;51;117;0;21900;17935;8,24;81,89;5,37;142
+1103;Városl Rehab. Szakkórház, Tata;"";Aktív betegell. oszt. együtt;60;60;60;0;60;60;2177;2009;51;117;0;21900;17935;8,24;81,89;5,37;142
 1104;Selye János Kórház, Komárom;01;Belgyógyászat;45;45;45;0;45;45;1836;1705;59;72;0;16425;14148;7,71;86,14;3,92;143
 1104;Selye János Kórház, Komárom;02;Sebészet;42;42;42;0;42;42;1373;1324;11;38;0;15330;9233;6,72;60,23;2,77;143
 1104;Selye János Kórház, Komárom;04;Szülészet-nőgyógyászat;34;34;34;0;34;34;1831;1826;5;0;4;12410;9418;5,14;75,89;0;143
@@ -325,7 +325,7 @@
 1201;Szent Lázár Megyei Kórház, Salgótarján;04;Szülészet-nőgyógyászat;54;54;54;0;54;54;3268;3254;13;1;801;19710;16526;5,06;83,85;0,03;150
 1201;Szent Lázár Megyei Kórház, Salgótarján;05;Csecs.- és gyermekgyógy.;51;51;51;0;51;51;2049;2044;4;1;0;18615;11786;5,75;63,31;0,05;150
 1201;Szent Lázár Megyei Kórház, Salgótarján;06;Fül-orr-gégészet;21;21;21;0;21;21;1271;1263;3;5;0;7665;4914;3,87;64,11;0,39;150
-1201;Szent Lázár Megyei Kórház, Salgótarján;07;Szemészet;20;20;20;0;17,3;17,3;592;585;7;0;0;6328;3236;5,47;51,38;0;150
+1201;Szent Lázár Megyei Kórház, Salgótarján;07;Szemészet;20;20;20;0;17,3;17,3;592;585;7;0;0;6298;3236;5,47;51,38;0;150
 1201;Szent Lázár Megyei Kórház, Salgótarján;08;Bőr- és nemibeteg;15;15;15;0;15;15;398;389;9;0;0;5475;3338;8,39;60,97;0;150
 1201;Szent Lázár Megyei Kórház, Salgótarján;09;Ideggyógyászat;75;69;69;6;75;69;2796;2626;64;106;0;25185;19327;6,91;76,74;3,79;150
 1201;Szent Lázár Megyei Kórház, Salgótarján;10;Ortopédia;21;21;21;0;21;21;720;708;12;0;0;7665;6342;8,81;82,74;0;150
@@ -363,17 +363,17 @@
 1301;Szent Rókus Kórház és Intézményei, Budapest;13;Fog- és szájsebészet;18;18;18;0;18;18;565;552;6;7;0;6570;3841;6,8;58,46;1,24;158
 1301;Szent Rókus Kórház és Intézményei, Budapest;15;Intenzív betegellátó;8;8;8;0;8;8;412;67;199;146;0;2920;2193;5,32;75,1;35,44;158
 1301;Szent Rókus Kórház és Intézményei, Budapest;"";Aktív betegell. oszt. együtt;568;560;539;8;568;557,4;24438;22602;1226;610;164;203453;162371;6,64;79,81;2,5;158
-1302;Városi Toldi Ferenc KH-RI, Cegléd;01;Belgyógyászat;133;133;133;0;133;133;5291;4491;279;521;0;48545;41759;7,89;86,02;9,85;159
-1302;Városi Toldi Ferenc KH-RI, Cegléd;02;Sebészet;80;80;80;0;80;80;3064;2827;149;88;0;29200;22978;7,5;78,69;2,87;159
-1302;Városi Toldi Ferenc KH-RI, Cegléd;03;Traumatológia;56;56;56;0;56;56;1824;1701;95;28;25;20440;12520;6,86;61,25;1,54;159
-1302;Városi Toldi Ferenc KH-RI, Cegléd;04;Szülészet-nőgyógyászat;60;60;60;0;60;60;3964;3951;11;2;55;21900;15876;4,01;72,49;0,05;159
-1302;Városi Toldi Ferenc KH-RI, Cegléd;05;Csecsemő- és gyermekgyógy.;30;30;30;0;30;30;1948;1945;2;1;0;10950;8914;4,58;81,41;0,05;159
-1302;Városi Toldi Ferenc KH-RI, Cegléd;06;Fül-orr-gégészet;15;15;15;0;15;15;1013;989;9;15;0;5475;4259;4,2;77,79;1,48;159
-1302;Városi Toldi Ferenc KH-RI, Cegléd;07;Szemészet;20;20;20;0;20;20;999;986;13;0;0;7300;4204;4,21;57,59;0;159
-1302;Városi Toldi Ferenc KH-RI, Cegléd;09;Ideggyógyászat;45;45;45;0;45;45;1590;1470;70;50;0;16425;14370;9,04;87,49;3,14;159
-1302;Városi Toldi Ferenc KH-RI, Cegléd;15;Intenzív betegellátó;8;8;8;0;8;8;330;42;197;91;0;2920;1757;5,32;60,17;27,58;159
-1302;Városi Toldi Ferenc KH-RI, Cegléd;18;Elmegyógyászat;85;85;85;0;85;85;1615;753;808;54;0;31025;26683;16,52;86;3,34;159
-1302;Városi Toldi Ferenc KH-RI, Cegléd;"";Aktív betegell. oszt. együtt;532;532;532;0;532;532;21638;19155;1633;850;80;194180;153320;7,09;78,96;3,93;159
+1302;Városl Toldi Ferenc KH-RI, Cegléd;01;Belgyógyászat;133;133;133;0;133;133;5291;4491;279;521;0;48545;41759;7,89;86,02;9,85;159
+1302;Városl Toldi Ferenc KH-RI, Cegléd;02;Sebészet;80;80;80;0;80;80;3064;2827;149;88;0;29200;22978;7,5;78,69;2,87;159
+1302;Városl Toldi Ferenc KH-RI, Cegléd;03;Traumatológia;56;56;56;0;56;56;1824;1701;95;28;25;20440;12520;6,86;61,25;1,54;159
+1302;Városl Toldi Ferenc KH-RI, Cegléd;04;Szülészet-nőgyógyászat;60;60;60;0;60;60;3964;3951;11;2;55;21900;15876;4,01;72,49;0,05;159
+1302;Városl Toldi Ferenc KH-RI, Cegléd;05;Csecs.- és gyermekgyógy.;30;30;30;0;30;30;1948;1945;2;1;0;10950;8914;4,58;81,41;0,05;159
+1302;Városl Toldi Ferenc KH-RI, Cegléd;06;Fül-orr-gégészet;15;15;15;0;15;15;1013;989;9;15;0;5475;4259;4,2;77,79;1,48;159
+1302;Városl Toldi Ferenc KH-RI, Cegléd;07;Szemészet;20;20;20;0;20;20;999;986;13;0;0;7300;4204;4,21;57,59;0;159
+1302;Városl Toldi Ferenc KH-RI, Cegléd;09;Ideggyógyászat;45;45;45;0;45;45;1590;1470;70;50;0;16425;14370;9,04;87,49;3,14;159
+1302;Városl Toldi Ferenc KH-RI, Cegléd;15;Intenzív betegellátó;8;8;8;0;8;8;330;42;197;91;0;2920;1757;5,32;60,17;27,58;159
+1302;Városl Toldi Ferenc KH-RI, Cegléd;18;Elmegyógyászat;85;85;85;0;85;85;1615;753;808;54;0;31025;26683;16,52;86;3,34;159
+1302;Városl Toldi Ferenc KH-RI, Cegléd;"";Aktív betegell. oszt. együtt;532;532;532;0;532;532;21638;19155;1633;850;80;194180;153320;7,09;78,96;3,93;159
 0109;Fővárosi Szent István KH-RI;01;Belgyógyászat;290;290;290;0;290;290;8938;7664;577;697;0;105850;87373;9,78;82,54;7,8;16
 0109;Fővárosi Szent István KH-RI;02;Sebészet;83;83;83;0;83;83;2440;2185;150;105;0;30295;21320;8,74;70,37;4,3;16
 0109;Fővárosi Szent István KH-RI;03;Traumatológia;151;151;151;0;151;151;6101;5470;466;165;1;55115;42203;6,92;76,57;2,7;16
@@ -420,14 +420,14 @@
 1309;Pest Megyei Flór Ferenc Kórház, Kistarcsa;"";Aktív betegell. oszt. együtt;708;708;650;0;708;703,8;27672;25435;1533;704;681;256902;195306;7,06;76,02;2,54;163
 1370;Munkaterápiás Intézet, Pomáz;18;Elmegyógyászat;42;42;42;0;42;42;773;523;197;53;0;15330;16634;21,52;108,5;6,86;168
 1370;Munkaterápiás Intézet, Pomáz;;Aktív betegell. oszt. együtt;42;42;42;0;42;42;773;523;197;53;0;15330;16634;21,52;108,5;6,86;168
-0110;Fővárosi Schöpf-Mérei Ágost Kórház és Anyavédelmi Központ;04;Szülészet-nőgyógyászat;70;70;70;0;70;70;6848;6793;55;0;6;25550;26620;3,89;104,2;0;17
-0110;Fővárosi Schöpf-Mérei Ágost Kórház és Anyavédelmi Központ;05;Csecs.- és gyermekgyógy.;26;26;26;0;26;26;643;489;142;12;0;9490;8043;12,51;84,75;1,87;17
-0110;Fővárosi Schöpf-Mérei Ágost Kórház és Anyavédelmi Központ;"";Aktív betegell. oszt. együtt;96;96;96;0;96;96;7491;7282;197;12;6;35040;34663;4,63;98,92;0,16;17
+0110;Fővárosi Schöpf-Merei Ágost Kórház és Anyavédelmi Központ;04;Szülészet-nőgyógyászat;70;70;70;0;70;70;6848;6793;55;0;6;25550;26620;3,89;104,2;0;17
+0110;Fővárosi Schöpf-Merei Ágost Kórház és Anyavédelmi Központ;05;Csecs.- és gyermekgyógy.;26;26;26;0;26;26;643;489;142;12;0;9490;8043;12,51;84,75;1,87;17
+0110;Fővárosi Schöpf-Merei Ágost Kórház és Anyavédelmi Központ;"";Aktív betegell. oszt. együtt;96;96;96;0;96;96;7491;7282;197;12;6;35040;34663;4,63;98,92;0,16;17
 1401;Megyei Kaposi Mór Kórház, Kaposvár;01;Belgyógyászat;158;158;158;0;158;158;5471;4898;256;317;0;57670;48278;8,82;83,71;5,79;171
 1401;Megyei Kaposi Mór Kórház, Kaposvár;02;Sebészet;103;82;82;21;111,5;90,5;4298;3990;187;121;9;33050;25778;6;78;2,82;171
 1401;Megyei Kaposi Mór Kórház, Kaposvár;03;Traumatológia;64;39;39;25;64;39;2469;2340;117;12;0;14235;10784;4,37;75,76;0,49;171
 1401;Megyei Kaposi Mór Kórház, Kaposvár;04;Szülészet-nőgyógyászat;70;70;70;0;70;70;4667;4640;22;5;9;25550;16486;3,53;64,52;0,11;171
-1401;Megyei Kaposi Mór Kórház, Kaposvár;05;Csec.- és gyermekgyógy.;72;72;72;0;72;72;3276;3240;35;1;0;26280;19774;6,04;75,24;0,03;171
+1401;Megyei Kaposi Mór Kórház, Kaposvár;05;Csecs.- és gyermekgyógy.;72;72;72;0;72;72;3276;3240;35;1;0;26280;19774;6,04;75,24;0,03;171
 1401;Megyei Kaposi Mór Kórház, Kaposvár;07;Szemészet;30;30;30;0;30;30;2232;2225;7;0;0;10950;5889;2,64;53,78;0;171
 1401;Megyei Kaposi Mór Kórház, Kaposvár;08;Bőr- és nemibeteg;30;30;30;0;30;30;629;612;14;3;0;10950;6629;10,54;60,54;0,48;171
 1401;Megyei Kaposi Mór Kórház, Kaposvár;09;Ideggyógyászat;40;27;27;13;40;27;923;743;64;116;0;9855;8946;9,69;90,78;12,57;171
@@ -441,20 +441,20 @@
 1401;Megyei Kaposi Mór Kórház, Kaposvár;"";Aktív betegell. oszt. együtt;832;756;756;76;834,1;754,1;33901;31701;1296;904;28;275234;201783;5,95;73,31;2,67;171
 1402;Városi Kórház, Siófok;01;Belgyógyászat;100;100;87;0;100;89,4;4093;3680;249;164;0;32624;29513;7,21;90,46;4,01;172
 1402;Városi Kórház, Siófok;04;Szülészet-nőgyógyászat;50;39;27;11;50;38,1;2382;2367;13;2;760;13898;10683;4,48;76,87;0,08;172
-1402;Városi Kórház, Siófok;05;Csecse- és gyermekgyógy.;35;35;21;0;35;33,8;1993;1993;0;0;0;12355;8641;4,34;69,94;0;172
+1402;Városi Kórház, Siófok;05;Csecs- és gyermekgyógy.;35;35;21;0;35;33,8;1993;1993;0;0;0;12355;8641;4,34;69,94;0;172
 1402;Városi Kórház, Siófok;06;Fül-orr-gégészet;20;18;9;2;20;18,3;877;866;7;4;0;6662;4024;4,59;60,4;0,46;172
 1402;Városi Kórház, Siófok;07;Szemészet;20;20;9;0;20;18,7;878;874;4;0;0;6810;4677;5,33;68,68;0;172
 1402;Városi Kórház, Siófok;09;Ideggyógyászat;43;43;43;0;43;37,1;1115;981;23;111;0;13556;9327;8,37;68,8;9,96;172
 1402;Városi Kórház, Siófok;15;Intenzív betegellátó;8;8;8;0;8;8;513;69;358;86;0;2920;2063;4,02;70,65;16,76;172
 1402;Városi Kórház, Siófok;92;Sebészeti típusú mátrix;77;77;57;0;77;63,4;3550;3304;183;63;10;23135;20288;5,71;87,69;1,77;172
 1402;Városi Kórház, Siófok;"";Aktív betegell. oszt. együtt;353;340;261;13;353;306,7;15401;14134;837;430;770;111960;89216;5,79;79,69;2,79;172
-1404;Városi Kórház, Marcali;01;Belgyógyászat;60;60;60;0;60;60;2271;1962;192;117;0;21900;19188;8,45;87,62;5,15;173
-1404;Városi Kórház, Marcali;02;Sebészet;33;33;33;0;33;33;1299;1219;40;40;0;12045;10084;7,76;83,72;3,08;173
-1404;Városi Kórház, Marcali;03;Traumatológia;25;25;25;0;25;25;1196;1159;21;16;0;9125;6516;5,45;71,41;1,34;173
-1404;Városi Kórház, Marcali;04;Szülészet-nőgyógyászat;38;38;38;0;38;38;1685;1675;10;0;3;13870;7501;4,45;54,08;0;173
-1404;Városi Kórház, Marcali;05;Csecs.- és gyermekgyógy.;30;30;30;0;30;30;1925;1923;2;0;0;10950;8900;4,62;81,28;0;173
-1404;Városi Kórház, Marcali;15;Intenzív betegellátó;4;4;4;0;4;4;178;34;81;63;0;1460;965;5,42;66,1;35,39;173
-1404;Városi Kórház, Marcali;"";Aktív betegell. oszt. együtt;190;190;190;0;190;190;8554;7972;346;236;3;69350;53154;6,21;76,65;2,76;173
+1404;Városl Kórház, Marcall;01;Belgyógyászat;60;60;60;0;60;60;2271;1962;192;117;0;21900;19188;8,45;87,62;5,15;173
+1404;Városl Kórház, Marcall;02;Sebészet;33;33;33;0;33;33;1299;1219;40;40;0;12045;10084;7,76;83,72;3,08;173
+1404;Városl Kórház, Marcall;03;Traumatológia;25;25;25;0;25;25;1196;1159;21;16;0;9125;6516;5,45;71,41;1,34;173
+1404;Városl Kórház, Marcall;04;Szülészet-nőgyógyászat;38;38;38;0;38;38;1685;1675;10;0;3;13870;7501;4,45;54,08;0;173
+1404;Városl Kórház, Marcall;05;Csecs.- és gyermekgyógy.;30;30;30;0;30;30;1925;1923;2;0;0;10950;8900;4,62;81,28;0;173
+1404;Városl Kórház, Marcall;15;Intenzív betegellátó;4;4;4;0;4;4;178;34;81;63;0;1460;965;5,42;66,1;35,39;173
+1404;Városl Kórház, Marcall;"";Aktív betegell. oszt. együtt;190;190;190;0;190;190;8554;7972;346;236;3;69350;53154;6,21;76,65;2,76;173
 1407;Városi Kórház, Nagyatád;01;Belgyógyászat;90;90;90;0;90;90;4224;3877;185;162;0;32850;28726;6,8;87,45;3,84;174
 1407;Városi Kórház, Nagyatád;04;Szülészet-nőgyógyászat;35;35;35;0;35;35;1538;1511;27;0;4;12775;6230;4,05;48,77;0;174
 1407;Városi Kórház, Nagyatád;05;Csecs.- és gyermekgyógy.;25;25;25;0;25;25;1342;1339;2;1;0;9125;6937;5,17;76,02;0,07;174
@@ -469,7 +469,7 @@
 1408;Magyarországi Református Egyház Tüdő- és Szívkórháza, Mosdós;05;Csecs.- és gyermekgyógy.;51;51;51;0;51;51;3273;3203;69;1;0;18615;17738;5,42;95,29;0,03;175
 1408;Magyarországi Református Egyház Tüdő- és Szívkórháza, Mosdós;19;Tüdőgyógyászat;80;80;80;0;80;80;2116;1828;172;116;0;29200;27226;12,87;93,24;5,48;175
 1408;Magyarországi Református Egyház Tüdő- és Szívkórháza, Mosdós;"";Aktív betegell. oszt. együtt;207;207;207;0;207;207;7797;7218;397;182;0;75555;69704;8,94;92,26;2,33;175
-1501;"Megyei ""Jósa András"" Kórház, Nyíregyháza";01;Belgyógyászat;399;399;399;0;399;399;14930;12489;1447;894;0;145635;128758;8,68;88,41;6,03;178
+1501;"Megyei ""Jósa András"" Kórház, Nyíregyháza";01;Belgyógyászat;399;399;399;0;399;399;14830;12489;1447;894;0;145635;128758;8,68;88,41;6,03;178
 1501;"Megyei ""Jósa András"" Kórház, Nyíregyháza";02;Sebészet;190;190;190;0;190;190;12438;11503;770;165;2308;69350;60333;4,85;87;1,33;178
 1501;"Megyei ""Jósa András"" Kórház, Nyíregyháza";03;Traumatológia;90;90;90;0;90;90;4038;3598;397;43;0;32850;25737;6,37;78,35;1,06;178
 1501;"Megyei ""Jósa András"" Kórház, Nyíregyháza";04;Szülészet-nőgyógyászat;120;120;120;0;120;120;5871;5714;157;0;373;43800;38069;6,48;86,92;0;178
@@ -493,7 +493,7 @@
 1502;Területi Kórház, Mátészalka;02;Sebészet;45;45;45;0;45;45;1904;1792;94;18;0;16425;13320;7;81,1;0,95;179
 1502;Területi Kórház, Mátészalka;03;Traumatológia;30;30;30;0;30;30;1634;1558;69;7;1;10950;8459;5,18;77,25;0,43;179
 1502;Területi Kórház, Mátészalka;04;Szülészet-nőgyógyászat;50;50;50;0;50;50;2652;2642;10;0;5;18250;9809;3,7;53,75;0;179
-1502;Területi Kórház, Mátészalka;05;Csecş.- és gyermekgyógy.;30;30;30;0;30;30;1614;1612;2;0;0;10950;7222;4,47;65,95;0;179
+1502;Területi Kórház, Mátészalka;05;Csecs,- és gyermekgyógy.;30;30;30;0;30;30;1614;1612;2;0;0;10950;7222;4,47;65,95;0;179
 1502;Területi Kórház, Mátészalka;06;Fül-orr-gégészet;20;20;20;0;20;20;1112;1104;4;4;0;7300;5126;4,61;70,22;0,36;179
 1502;Területi Kórház, Mátészalka;07;Szemészet;24;24;24;0;24;24;1404;1397;7;0;0;8760;7656;5,45;87,4;0;179
 1502;Területi Kórház, Mátészalka;09;Ideggyógyászat;40;40;40;0;40;40;1306;1240;52;14;0;14600;9926;7,6;67,99;1,07;179
@@ -511,7 +511,7 @@
 0112;Fővárosi Bajcsy-Zsilinszky KH-RI;15;Intenzív betegellátó;8;8;8;0;8;8;581;21;468;92;0;2920;2018;3,47;69,11;15,83;18
 0112;Fővárosi Bajcsy-Zsilinszky KH-RI;18;Elmegyógyászat;60;60;60;0;60;60;1162;1083;70;9;0;21900;15292;13,16;69,83;0,77;18
 0112;Fővárosi Bajcsy-Zsilinszky KH-RI;"";Aktív betegell. oszt. együtt;569;569;569;0;569;569;25289;22383;2176;730;2277;207685;151745;6;73,06;2,89;18
-1503;Felső-Szabolcsi Kórház, Kisvárda;01;Belgyógyógyászat;138;138;138;0;138;138;4972;4577;188;207;0;50370;41086;8,26;81,57;4,16;180
+1503;Felső-Szabolcsi Kórház, Kisvárda;01;Belgyógyászat;138;138;138;0;138;138;4972;4577;188;207;0;50370;41086;8,26;81,57;4,16;180
 1503;Felső-Szabolcsi Kórház, Kisvárda;02;Sebészet;45;45;45;0;45;45;2536;2171;346;19;3;16425;14703;5,8;89,52;0,75;180
 1503;Felső-Szabolcsi Kórház, Kisvárda;03;Traumatológia;36;36;36;0;36;36;1207;1108;92;7;0;13140;7865;6,52;59,86;0,58;180
 1503;Felső-Szabolcsi Kórház, Kisvárda;04;Szülészet-nőgyógyászat;50;50;50;0;50;50;2696;2684;12;0;12;18250;14045;5,21;76,96;0;180
@@ -522,16 +522,16 @@
 1503;Felső-Szabolcsi Kórház, Kisvárda;14;Reumatológia;45;45;45;0;45;45;1688;1672;15;1;0;16425;15090;8,94;91,87;0,06;180
 1503;Felső-Szabolcsi Kórház, Kisvárda;15;Intenzív betegellátó;7;7;7;0;7;7;313;8;261;44;0;2555;1750;5,59;68,49;14,06;180
 1503;Felső-Szabolcsi Kórház, Kisvárda;"";Aktív betegell. oszt. együtt;459;459;459;0;459;459;20403;19142;967;294;15;167535;134877;6,61;80,51;1,44;180
-1505;Sz-Sz-B M. Önk. Szatmár-Bereg KH Fehérgyarmat-Vásárosnamény;01;Belgyógyászat;110;110;110;0;110;110;4213;3830;230;153;0;40150;36296;8,62;90,4;3,63;181
-1505;Sz-Sz-B M. Önk. Szatmár-Bereg KH Fehérgyarmat-Vásárosnamény;02;Sebészet;50;50;50;0;50;40;1982;1851;103;28;0;14605;12070;6,09;82,64;1,41;181
-1505;Sz-Sz-B M. Önk. Szatmár-Bereg KH Fehérgyarmat-Vásárosnamény;04;Szülészet-nőgyógyászat;50;50;50;0;50;50;2614;2606;8;0;4;18250;12535;4,8;68,68;0;181
-1505;Sz-Sz-B M. Önk. Szatmár-Bereg KH Fehérgyarmat-Vásárosnamény;05;Csecs,- és gyermekgyógy.;35;35;35;0;35;35;1839;1824;14;1;0;12775;9682;5,26;75,79;0,05;181
-1505;Sz-Sz-B M. Önk. Szatmár-Bereg KH Fehérgyarmat-Vásárosnamény;06;Fül-orr-gégészet;25;25;25;0;25;25;1724;1722;2;0;0;9125;6031;3,5;66,09;0;181
-1505;Sz-Sz-B M. Önk. Szatmár-Bereg KH Fehérgyarmat-Vásárosnamény;15;Intenzív betegellátó;6;6;6;0;6;6;237;28;149;60;0;2190;1510;6,37;68,95;25,32;181
-1505;Sz-Sz-B M. Önk. Szatmár-Bereg KH Fehérgyarmat-Vásárosnamény;16;Fertőző betegellátó;30;30;30;0;30;30;947;920;27;0;0;10950;4971;5,25;45,4;0;181
-1505;Sz-Sz-B M. Önk. Szatmár-Bereg KH Fehérgyarmat-Vásárosnamény;17;Felvételi osztály;16;16;16;0;16;16;866;695;132;39;0;5840;3000;3,46;51,37;4,5;181
-1505;Sz-Sz-B M. Önk. Szatmár-Bereg KH Fehérgyarmat-Vásárosnamény;"";Árvíz szükség osztály;0;0;0;0;37,2;0;0;0;0;0;0;13572;0;0;0;0;181
-1505;Sz-Sz-B M. Önk. Szatmár-Bereg KH Fehérgyarmat-Vásárosnamény;"";Aktív betegell. oszt. együtt;322;322;322;0;359,2;349,2;14422;13476;665;281;4;127457;86095;5,97;67,55;1,95;181
+1505;Sz-Sz-B M. Önk. Szatmár-Beregi KH Fehérgyarmat-Vásárosnamény;01;Belgyógyászat;110;110;110;0;110;110;4213;3830;230;153;0;40150;36296;8,62;90,4;3,63;181
+1505;Sz-Sz-B M. Önk. Szatmár-Beregi KH Fehérgyarmat-Vásárosnamény;02;Sebészet;50;50;50;0;50;40;1982;1851;103;28;0;14605;12070;6,09;82,64;1,41;181
+1505;Sz-Sz-B M. Önk. Szatmár-Beregi KH Fehérgyarmat-Vásárosnamény;04;Szülészet-nőgyógyászat;50;50;50;0;50;50;2614;2606;8;0;4;18250;12535;4,8;68,68;0;181
+1505;Sz-Sz-B M. Önk. Szatmár-Beregi KH Fehérgyarmat-Vásárosnamény;05;Csecs.- és gyermekgyógy.;35;35;35;0;35;35;1839;1824;14;1;0;12775;9682;5,26;75,79;0,05;181
+1505;Sz-Sz-B M. Önk. Szatmár-Beregi KH Fehérgyarmat-Vásárosnamény;06;Fül-orr-gégészet;25;25;25;0;25;25;1724;1722;2;0;0;9125;6031;3,5;66,09;0;181
+1505;Sz-Sz-B M. Önk. Szatmár-Beregi KH Fehérgyarmat-Vásárosnamény;15;Intenzív betegellátó;6;6;6;0;6;6;237;28;149;60;0;2190;1510;6,37;68,95;25,32;181
+1505;Sz-Sz-B M. Önk. Szatmár-Beregi KH Fehérgyarmat-Vásárosnamény;16;Fertőző betegellátó;30;30;30;0;30;30;947;920;27;0;0;10950;4971;5,25;45,4;0;181
+1505;Sz-Sz-B M. Önk. Szatmár-Beregi KH Fehérgyarmat-Vásárosnamény;17;Felvételi osztály;16;16;16;0;16;16;866;695;132;39;0;5840;3000;3,46;51,37;4,5;181
+1505;Sz-Sz-B M. Önk. Szatmár-Beregi KH Fehérgyarmat-Vásárosnamény;"";Árvíz szükség osztály;0;0;0;0;37,2;37,2;0;0;0;0;0;13572;0;;0;0;181
+1505;Sz-Sz-B M. Önk. Szatmár-Beregi KH Fehérgyarmat-Vásárosnamény;"";Aktív betegell. oszt. együtt;322;322;322;0;359,2;349,2;14422;13476;665;281;4;127457;86095;5,97;67,55;1,95;181
 1506;Megyei Pszichiátriai Szakkórház, Nagykálló;18;Elmegyógyászat;355;355;355;0;355;355;7412;6857;530;25;0;129575;112205;15,14;86,59;0,34;182
 1506;Megyei Pszichiátriai Szakkórház, Nagykálló;;Aktív betegell. oszt. együtt;355;355;355;0;355;355;7412;6857;530;25;0;129575;112205;15,14;86,59;0,34;182
 1601;Megyei Hetényi Géza Kórház, Szolnok;01;Belgyógyászat;267;267;267;0;267;267;10159;8577;1014;568;0;97455;76208;7,5;78,2;5,59;185
@@ -589,7 +589,7 @@
 0115;Fővárosi Jáhn Ferenc Dél-Pesti Kórháza;09;Ideggyógyászat;100;100;100;0;100;100;2728;2283;328;117;0;36500;29053;10,65;79,6;4,29;19
 0115;Fővárosi Jáhn Ferenc Dél-Pesti Kórháza;11;Urológia;26;26;26;0;26;26;1932;1858;66;8;2;9490;9850;5,1;103,8;0,41;19
 0115;Fővárosi Jáhn Ferenc Dél-Pesti Kórháza;15;Intenzív betegellátó;12;12;12;0;12;12;568;66;388;114;0;4380;2830;4,98;64,61;20,07;19
-0115;Fővárosi Jáhn Ferenc Dél-Pesti Kórháza;17;Felvételi osztály;8;8;8;0;8;8;63;54;5;4;0;920;439;6,97;15,03;6,35;19
+0115;Fővárosi Jáhn Ferenc Dél-Pesti Kórháza;17;Felvételi osztály;8;8;8;0;8;8;63;54;5;4;0;2920;439;6,97;15,03;6,35;19
 0115;Fővárosi Jáhn Ferenc Dél-Pesti Kórháza;18;Elmegyógyászat;28;28;0;0;28;21,6;1261;1249;11;1;0;7896;2801;2,22;35,47;0,08;19
 0115;Fővárosi Jáhn Ferenc Dél-Pesti Kórháza;"";Aktív betegell. oszt. együtt;646;646;618;0;646;629,2;27655;23900;2746;1009;991;229666;183210;6,62;79,77;3,65;19
 9521;MÁV Kórház és Rendelőintézet, Szolnok;01;Belgyógyászat;101;101;101;0;101;101;3611;3357;184;70;0;36865;30127;8,34;81,72;1,94;190
@@ -669,16 +669,16 @@
 0116;Fővárosi Péterfy S. Utcai KH-RI;"";Aktív betegell. oszt. együtt;898;898;898;0;898;898;37354;33334;2671;1349;62;327770;253008;6,77;77,19;3,61;20
 1803;Városi Kórház, Sárvár;90;Mátrix intézet;84;84;84;0;84;84;3804;3493;165;146;4;30660;25821;6,79;84,22;3,84;200
 1803;Városi Kórház, Sárvár;;Aktív betegell. oszt. együtt;84;84;84;0;84;84;3804;3493;165;146;4;30660;25821;6,79;84,22;3,84;200
-1804;Dr. Batthyány Strattmann Lászlo Kórház, Körmend;01;Belgyógyászat;40;40;40;0;40;40;1392;1174;128;90;0;14600;12147;8,73;83,2;6,47;201
-1804;Dr. Batthyány Strattmann Lászlo Kórház, Körmend;02;Sebészet;40;40;40;0;40;40;1327;1250;47;30;14;14600;10554;7,95;72,29;2,26;201
-1804;Dr. Batthyány Strattmann Lászlo Kórház, Körmend;04;Szülészet-nőgyógyászat;20;20;20;0;20;20;1214;1212;2;0;19;7300;4989;4,11;68,34;0;201
-1804;Dr. Batthyány Strattmann Lászlo Kórház, Körmend;90;Mátrix intézet;0;0;0;0;0;0;7;1;1;5;0;0;228;32,57;;71,43;201
-1804;Dr. Batthyány Strattmann Lászlo Kórház, Körmend;"";Aktív betegell. oszt. együtt;100;100;100;0;100;100;3940;3637;178;125;33;36500;27918;7,09;76,49;3,17;201
+1804;Dr. Batthyány Strattmann László Kórház, Körmend;01;Belgyógyászat;40;40;40;0;40;40;1392;1174;128;90;0;14600;12147;8,73;83,2;6,47;201
+1804;Dr. Batthyány Strattmann László Kórház, Körmend;02;Sebészet;40;40;40;0;40;40;1327;1250;47;30;14;14600;10554;7,95;72,29;2,26;201
+1804;Dr. Batthyány Strattmann László Kórház, Körmend;04;Szülészet-nőgyógyászat;20;20;20;0;20;20;1214;1212;2;0;19;7300;4989;4,11;68,34;0;201
+1804;Dr. Batthyány Strattmann László Kórház, Körmend;90;Mátrix intézet;0;0;0;0;0;0;7;1;1;5;0;0;228;32,57;;71,43;201
+1804;Dr. Batthyány Strattmann László Kórház, Körmend;"";Aktív betegell. oszt. együtt;100;100;100;0;100;100;3940;3637;178;125;33;36500;27918;7,09;76,49;3,17;201
 1805;Kemenesaljai Egyesített Kórház, Celldömölk;90;Mátrix intézet;84;84;84;0;84;77;3615;3411;112;92;18;28116;26453;7,32;94,09;2,54;202
 1805;Kemenesaljai Egyesített Kórház, Celldömölk;;Aktív betegell. oszt. együtt;84;84;84;0;84;77;3615;3411;112;92;18;28116;26453;7,32;94,09;2,54;202
 1901;Megyei Csolnoky Ferenc KH-RI, Veszprém;01;Belgyógyászat;156;156;156;0;156;156;6144;5297;394;453;2;56940;49686;8,09;87,26;7,37;206
 1901;Megyei Csolnoky Ferenc KH-RI, Veszprém;02;Sebészet;82;82;82;0;82;82;3250;3005;200;45;38;29930;23046;7,09;77;1,38;206
-1901;Megyei Csolnoky Ferenc KH-RI, Veszprém;03;Traumatológia;67;58;58;9;67;59,7;2302;2171;84;47;0;21852;18329;7,96;84,07;2,04;206
+1901;Megyei Csolnoky Ferenc KH-RI, Veszprém;03;Traumatológia;67;58;58;9;67;59,7;2302;2171;84;47;0;21802;18329;7,96;84,07;2,04;206
 1901;Megyei Csolnoky Ferenc KH-RI, Veszprém;04;Szülészet-nőgyógyászat;80;80;80;0;80;80;4466;4392;73;1;169;29200;22675;5,08;77,65;0,02;206
 1901;Megyei Csolnoky Ferenc KH-RI, Veszprém;05;Csecs.- és gyermekgyógy.;70;70;70;0;70;70;4077;3781;284;12;0;25550;20787;5,1;81,36;0,29;206
 1901;Megyei Csolnoky Ferenc KH-RI, Veszprém;06;Fül-orr-gégészet;30;30;30;0;30;30;2024;2000;16;8;0;10950;7248;3,58;66,19;0,4;206
@@ -717,7 +717,7 @@
 0118;Fővárosi Uzsoki Utcai KH-RI;15;Intenzív betegellátó;13;13;13;0;13;13;541;85;339;117;0;4745;2167;4,01;45,67;21,63;21
 0118;Fővárosi Uzsoki Utcai KH-RI;19;Tüdőgyógyászat;40;40;40;0;40;40;1092;955;83;54;0;14600;12034;11,02;82,42;4,95;21
 0118;Fővárosi Uzsoki Utcai KH-RI;"";Aktív betegell. oszt. együtt;674;674;674;0;674;674;26069;23042;2399;628;13;246010;185209;7,1;75,29;2,41;21
-1908;Városi Erzsébet Kórház-Rendelőintézet, Zirc;01;Belgyógyászat;0;0;0;0;23,9;23,9;833;671;107;55;0;8738;7274;8,73;83,28;6,6;210
+1908;Városi Erzsébet Kórház-Rendelőintézet, Zirc;01;Belgyógyászat;0;0;0;0;23,9;23,9;833;671;107;55;0;8736;7274;8,73;83,26;6,6;210
 1908;Városi Erzsébet Kórház-Rendelőintézet, Zirc;02;Sebészet;0;0;0;0;25,4;25,4;832;730;83;19;0;9282;6244;7,5;67,27;2,28;210
 1908;Városi Erzsébet Kórház-Rendelőintézet, Zirc;04;Szülészet-nőgyógyászat;0;0;0;0;10,5;10,5;511;509;2;0;0;3822;2445;4,78;63,97;0;210
 1908;Városi Erzsébet Kórház-Rendelőintézet, Zirc;90;Mátrix intézet;80;80;80;0;20,2;20,2;661;573;62;26;0;7360;5390;8,15;73,23;3,93;210
@@ -726,13 +726,13 @@
 1909;Városi Kórház-Rendelőintézet, Tapolca;02;Sebészet;64;64;64;0;64;64;2489;2411;25;53;1;23360;16248;6,53;69,55;2,13;211
 1909;Városi Kórház-Rendelőintézet, Tapolca;04;Szülészet-nőgyógyászat;30;30;30;0;30;30;1551;1543;8;0;353;10950;6695;4,32;61,14;0;211
 1909;Városi Kórház-Rendelőintézet, Tapolca;"";Aktív betegell. oszt. együtt;168;168;168;0;168;168;6616;6319;65;232;354;61320;44166;6,68;72,03;3,51;211
-1911;Veszprém Megyei Önkormányzat Tüdőgyógyintézete, Farkasgyepü;19;Tüdőgyógyászat;127;127;127;0;127;127;2834;2687;33;114;0;46355;36510;12,88;78,76;4,02;213
-1911;Veszprém Megyei Önkormányzat Tüdőgyógyintézete, Farkasgyepü;;Aktív betegell. oszt. együtt;127;127;127;0;127;127;2834;2687;33;114;0;46355;36510;12,88;78,76;4,02;213
+1911;Veszprém Megyei Önkormányzat Tüdőgyógyintézete, Farkasgyepű;19;Tüdőgyógyászat;127;127;127;0;127;127;2834;2687;33;114;0;46355;36510;12,88;78,76;4,02;213
+1911;Veszprém Megyei Önkormányzat Tüdőgyógyintézete, Farkasgyepű;;Aktív betegell. oszt. együtt;127;127;127;0;127;127;2834;2687;33;114;0;46355;36510;12,88;78,76;4,02;213
 1912;Városi Magyar Imre Kórház, Ajka;01;Belgyógyászat;0;0;0;0;19,8;19,8;685;532;109;44;0;7240;6759;9,87;93,36;6,42;214
 1912;Városi Magyar Imre Kórház, Ajka;02;Sebészet;38;38;38;0;38;38;1373;1229;123;21;0;13870;8396;6,12;60,53;1,53;214
 1912;Városi Magyar Imre Kórház, Ajka;03;Traumatológia;62;62;62;0;62;62;2247;2100;136;11;0;22630;16495;7,34;72,89;0,49;214
 1912;Városi Magyar Imre Kórház, Ajka;04;Szülészet-nőgyógyászat;30;30;30;0;30;30;2100;2090;10;0;392;10950;9571;4,56;87,41;0;214
-1912;Városi Magyar Imre Kórház, Ajka;05;Csecs,- és gyermekgyógy.;25;25;25;0;25;25;1698;1697;0;1;0;9125;7110;4,19;77,92;0,06;214
+1912;Városi Magyar Imre Kórház, Ajka;05;Csecs.- és gyermekgyógy.;25;25;25;0;25;25;1698;1697;0;1;0;9125;7110;4,19;77,92;0,06;214
 1912;Városi Magyar Imre Kórház, Ajka;06;Fül-orr-gégészet;15;15;15;0;15;15;301;296;3;2;0;5475;1814;6,03;33,13;0,66;214
 1912;Városi Magyar Imre Kórház, Ajka;07;Szemészet;20;20;20;0;20;20;902;900;2;0;2;7300;4016;4,45;55,01;0;214
 1912;Városi Magyar Imre Kórház, Ajka;09;Ideggyógyászat;0;0;0;0;14,9;14,9;483;421;49;13;0;5430;4720;9,77;86,92;2,69;214
@@ -742,13 +742,13 @@
 1912;Városi Magyar Imre Kórház, Ajka;"";Aktív betegell. oszt. együtt;364;364;364;0;364;364;14308;12987;963;358;396;132860;100993;7,06;76,01;2,5;214
 1968;Állami Szívkórház, Balatonfüred;01;Belgyógyászat;36;36;36;0;36;36;1306;1241;46;19;2;13140;9069;6,94;69,02;1,45;216
 1968;Állami Szívkórház, Balatonfüred;"";Aktív betegell. oszt. együtt;36;36;36;0;36;36;1306;1241;46;19;2;13140;9069;6,94;69,02;1,45;216
-0119;Fővárosi Nyíró Gyula KH-RI;01;Belgyógyászat;154;154;154;0;154;154;5046;4263;441;342;0;56210;48962;9,7;87,11;6,78;22
-0119;Fővárosi Nyíró Gyula KH-RI;02;Sebészet;35;35;35;0;35;35;1218;1096;95;27;0;12775;8402;6,9;65,77;2,22;22
-0119;Fővárosi Nyíró Gyula KH-RI;04;Szülészet-nőgyógyászat;50;50;50;0;50;50;2965;2952;13;0;1088;18250;12059;4,07;66,08;0;22
-0119;Fővárosi Nyíró Gyula KH-RI;09;Ideggyógyászat;35;35;35;0;35;35;994;927;48;19;0;12775;10927;10,99;85,53;1,91;22
-0119;Fővárosi Nyíró Gyula KH-RI;15;Intenzív betegellátó;8;8;8;0;8;8;605;154;367;84;0;2920;2297;3,8;78,66;13,88;22
-0119;Fővárosi Nyíró Gyula KH-RI;18;Elmegyógyászat;127;127;127;0;127;127;3785;3680;70;35;0;46355;44013;11,63;94,95;0,92;22
-0119;Fővárosi Nyíró Gyula KH-RI;"";Aktív betegell. oszt. együtt;409;409;409;0;409;409;14613;13072;1034;507;1088;149285;126660;8,67;84,84;3,47;22
+0119;Fővárosi Nyírő Gyula KH-RI;01;Belgyógyászat;154;154;154;0;154;154;5046;4263;441;342;0;56210;48962;9,7;87,11;6,78;22
+0119;Fővárosi Nyírő Gyula KH-RI;02;Sebészet;35;35;35;0;35;35;1218;1096;95;27;0;12775;8402;6,9;65,77;2,22;22
+0119;Fővárosi Nyírő Gyula KH-RI;04;Szülészet-nőgyógyászat;50;50;50;0;50;50;2965;2952;13;0;1088;18250;12059;4,07;66,08;0;22
+0119;Fővárosi Nyírő Gyula KH-RI;09;Ideggyógyászat;35;35;35;0;35;35;994;927;48;19;0;12775;10927;10,99;85,53;1,91;22
+0119;Fővárosi Nyírő Gyula KH-RI;15;Intenzív betegellátó;8;8;8;0;8;8;605;154;367;84;0;2920;2297;3,8;78,66;13,88;22
+0119;Fővárosi Nyírő Gyula KH-RI;18;Elmegyógyászat;127;127;127;0;127;127;3785;3680;70;35;0;46355;44013;11,63;94,95;0,92;22
+0119;Fővárosi Nyírő Gyula KH-RI;"";Aktív betegell. oszt. együtt;409;409;409;0;409;409;14613;13072;1034;507;1088;149285;126660;8,67;84,84;3,47;22
 2001;Zala Megyei Kórház, Zalaegerszeg;01;Belgyógyászat;174;168;168;6;176,6;170,6;7065;5847;1039;179;17;62280;50346;7,13;80,84;2,53;220
 2001;Zala Megyei Kórház, Zalaegerszeg;02;Sebészet;106;104;104;2;106;104;4063;3482;514;67;16;37960;26646;6,56;70,19;1,65;220
 2001;Zala Megyei Kórház, Zalaegerszeg;03;Traumatológia;62;62;62;0;62;62;2631;2404;217;10;0;22630;17462;6,64;77,16;0,38;220
@@ -771,7 +771,7 @@
 2002;Megyei Jogú Város Kórháza, Nagykanizsa;02;Sebészet;72;72;72;0;72;72;2738;2572;133;33;0;26280;18933;6,91;72,04;1,21;221
 2002;Megyei Jogú Város Kórháza, Nagykanizsa;03;Traumatológia;48;48;48;0;48;48;1842;1757;80;5;0;17520;10898;5,92;62,2;0,27;221
 2002;Megyei Jogú Város Kórháza, Nagykanizsa;04;Szülészet-nőgyógyászat;72;72;72;0;72;72;2381;2369;10;2;0;26280;12063;5,07;45,9;0,08;221
-2002;Megyei Jogú Város Kórháza, Nagykanizsa;05;Csecs.- és gyermekgyógy.;46;46;46;0;46;46;1577;1557;20;0;0;16790;9179;5,82;54,67;0;221
+2002;Megyei Jogú Város Kórháza, Nagykanizsa;05;Csecs,- és gyermekgyógy.;46;46;46;0;46;46;1577;1557;20;0;0;16790;9179;5,82;54,67;0;221
 2002;Megyei Jogú Város Kórháza, Nagykanizsa;06;Fül-orr-gégészet;25;25;25;0;25;25;1779;1754;19;6;0;9125;7361;4,14;80,67;0,34;221
 2002;Megyei Jogú Város Kórháza, Nagykanizsa;07;Szemészet;20;20;20;0;20;20;1492;1487;4;1;0;7300;5428;3,64;74,36;0,07;221
 2002;Megyei Jogú Város Kórháza, Nagykanizsa;09;Ideggyógyászat;49;49;49;0;49;49;1692;1467;118;107;0;17885;15241;9,01;85,22;6,32;221
@@ -798,11 +798,11 @@
 0121;Fővárosi Önkormányzat Károlyi Sándor Kórház és Rendelőint.;"";Aktív betegell. oszt. együtt;555;555;555;0;555;555;20667;18531;1424;712;1195;202575;140637;6,8;69,42;3,45;23
 0122;Fővárosi Heim Pál Gyermekkórház;05;Csecs.- és gyermekgyógy.;380;380;380;0;380;366,9;18453;17958;484;11;141;133936;83966;4,55;62,69;0,06;24
 0122;Fővárosi Heim Pál Gyermekkórház;"";Aktív betegell. oszt. együtt;380;380;380;0;380;366,9;18453;17958;484;11;141;133936;83966;4,55;62,69;0,06;24
-0123;Magyarországi Református Egyház Bethesda Gyermekkórháza, Bp.;02;Sebészet;29;;29;0;31;31;2071;2036;34;1;0;;7990;3,86;70,65;0,05;25
-0123;Magyarországi Református Egyház Bethesda Gyermekkórháza, Bp.;05;Csecs.- és gyermekgyógy.;111;;111;0;111;111;4107;4034;67;6;0;;24392;5,94;60,2;0,15;25
-0123;Magyarországi Református Egyház Bethesda Gyermekkórháza, Bp.;06;Fül-orr-gégészet;20;;20;0;20;20;1824;1821;3;0;0;;3705;2,03;50,75;0;25
-0123;Magyarországi Református Egyház Bethesda Gyermekkórháza, Bp.;15;Intenzív betegellátó;11;;11;0;9;9;214;61;143;10;0;;1574;7,36;47,83;4,67;25
-0123;Magyarországi Református Egyház Bethesda Gyermekkórháza, Bp.;"";Aktív betegell. oszt. együtt;171;;171;0;171;171;8216;7952;247;17;0;;37661;4,58;60,34;0,21;25
+0123;Magyarországi Református Egyház Bethesda Gyermekkórháza, Bp.;02;Sebészet;29;29;29;0;31;31;2071;2036;34;1;0;11309;7990;3,86;70,65;0,05;25
+0123;Magyarországi Református Egyház Bethesda Gyermekkórháza, Bp.;05;Csecs.- és gyermekgyógy.;111;111;111;0;111;111;4107;4034;67;6;0;40515;24392;5,94;60,2;0,15;25
+0123;Magyarországi Református Egyház Bethesda Gyermekkórháza, Bp.;06;Fül-orr-gégészet;20;20;20;0;20;20;1824;1821;3;0;0;7300;3705;2,03;50,75;0;25
+0123;Magyarországi Református Egyház Bethesda Gyermekkórháza, Bp.;15;Intenzív betegellátó;11;11;11;0;9;9;214;61;143;10;0;3291;1574;7,36;47,83;4,67;25
+0123;Magyarországi Református Egyház Bethesda Gyermekkórháza, Bp.;"";Aktív betegell. oszt. együtt;171;171;171;0;171;171;8216;7952;247;17;0;62415;37661;4,58;60,34;0,21;25
 0124;Fővárosi Budai Gyermekkórház-RI;05;Csecs.- és gyermekgyógy.;95;95;95;0;93,8;93,8;5735;5731;4;0;0;34225;27125;4,73;79,25;0;26
 0124;Fővárosi Budai Gyermekkórház-RI;"";Aktív betegell. oszt. együtt;95;95;95;0;93,8;93,8;5735;5731;4;0;0;34225;27125;4,73;79,25;0;26
 0125;Fővárosi Madarász Utcai Gyermekkórház-RI;02;Sebészet;29;29;29;0;29;29;2382;2320;62;0;1;10585;8169;3,43;77,18;0;27
@@ -815,7 +815,7 @@
 0127;Fővárosi Szent László Kórház;01;Belgyógyászat;61;61;61;0;61;59;1057;939;44;74;0;21530;15214;14,39;70,66;7;28
 0127;Fővárosi Szent László Kórház;02;Sebészet;45;45;45;0;45;45;1464;1218;165;81;0;16425;11766;8,04;71,63;5,53;28
 0127;Fővárosi Szent László Kórház;04;Szülészet-nőgyógyászat;7;7;7;0;7;7;179;167;12;0;0;2555;831;4,64;32,52;0;28
-0127;Fővárosi Szent László Kórház;05;Csecs.- és gyermekgyógyászat;171;132;132;39;171;133,6;7003;6896;107;0;0;48767;24489;3,5;50,22;0;28
+0127;Fővárosi Szent László Kórház;05;Csecs.- és gyermekgyógy.;171;132;132;39;171;133,6;7003;6896;107;0;0;48767;24489;3,5;50,22;0;28
 0127;Fővárosi Szent László Kórház;06;Fül-orr-gégészet;30;30;30;0;30;30;1984;1964;20;0;0;10950;6262;3,16;57,19;0;28
 0127;Fővárosi Szent László Kórház;12;Onkológia, onkoradiológia;38;38;38;0;38;38;3035;3001;10;24;0;13870;7265;2,39;52,38;0,79;28
 0127;Fővárosi Szent László Kórház;15;Intenzív betegellátó;22;22;22;0;22;22;431;107;233;91;0;8030;3295;7,65;41,03;21,11;28
@@ -829,7 +829,7 @@
 0140;Semmelweis Egyetem, Budapest;02;Sebészet;444;444;444;0;435,6;427,1;19327;15944;3232;151;1273;155904;113233;5,86;72,63;0,78;30
 0140;Semmelweis Egyetem, Budapest;03;Traumatológia;30;30;30;0;30;30;1058;1046;8;4;1;10950;7523;7,11;68,7;0,38;30
 0140;Semmelweis Egyetem, Budapest;04;Szülészet-nőgyógyászat;284;284;284;0;284,3;284,3;19222;19079;139;4;101;103780;90246;4,69;86,96;0,02;30
-0140;Semmelweis Egyetem, Budapest;05;Csecsemő- és gyermekgyógy.;384;384;381;0;327,1;318;15825;14701;965;159;0;116072;89666;5,67;77,25;1;30
+0140;Semmelweis Egyetem, Budapest;05;Csecs.- és gyermekgyógy.;384;384;381;0;327,1;318;15825;14701;965;159;0;116072;89666;5,67;77,25;1;30
 0140;Semmelweis Egyetem, Budapest;06;Fül-orr-gégészet;45;45;45;0;51,7;48,3;3088;3072;16;0;0;17645;13038;4,22;73,89;0;30
 0140;Semmelweis Egyetem, Budapest;07;Szemészet;124;124;98;0;130,9;128,4;8881;8788;90;3;3;46879;46304;5,21;98,77;0,03;30
 0140;Semmelweis Egyetem, Budapest;08;Bőr- és nemibeteg;23;23;23;0;24,3;24,3;1080;1040;39;1;0;8861;9219;8,54;104;0,09;30
@@ -859,7 +859,7 @@
 0154;Országos Onkológiai Intézet, Budapest;"";Aktív betegell. oszt. együtt;348;348;348;0;348;348;15251;13781;1224;246;22;127020;107052;7,02;84,28;1,61;34
 0155;Országos Gyógyintézeti Központ, Budapest;01;Belgyógyászat;272;272;272;0;272;266,7;9408;8644;567;197;25;97360;72947;7,75;74,93;2,09;35
 0155;Országos Gyógyintézeti Központ, Budapest;02;Sebészet;110;110;110;0;110;106,1;3353;3136;132;85;0;38710;25953;7,74;67,04;2,54;35
-0155;Országos Gyógyintézeti Központ, Budapest;04;Szülészet-nőgyógyászat;96;96;96;0;96;96;4310;4298;1;1;177;35040;28564;6,63;81,52;0,02;35
+0155;Országos Gyógyintézeti Központ, Budapest;04;Szülészet-nőgyógyászat;96;96;96;0;96;96;4310;4298;11;1;177;35040;28564;6,63;81,52;0,02;35
 0155;Országos Gyógyintézeti Központ, Budapest;05;Csecs.- és gyermekgyógy.;10;10;10;0;10;10;135;119;0;16;0;3650;4329;32,07;118,6;11,85;35
 0155;Országos Gyógyintézeti Központ, Budapest;06;Fül-orr-gégészet;49;49;49;0;49;49;2339;2301;26;12;0;17885;12826;5,48;71,71;0,51;35
 0155;Országos Gyógyintézeti Központ, Budapest;07;Szemészet;38;38;38;0;38;38;1582;1577;5;0;0;13870;8857;5,6;63,86;0;35
@@ -872,8 +872,8 @@
 0156;Országos Korányi TBC és Pulmonológiai Intézet, Budapest;15;Intenzív betegellátó;24;24;24;0;24;24;1521;296;1148;77;0;8760;5080;3,34;57,99;5,06;36
 0156;Országos Korányi TBC és Pulmonológiai Intézet, Budapest;19;Tüdőgyógyászat;428;428;428;0;428;428;11705;10451;731;523;0;156220;124093;10,6;79,43;4,47;36
 0156;Országos Korányi TBC és Pulmonológiai Intézet, Budapest;"";Aktív betegell. oszt. együtt;605;605;605;0;605;605;19201;15088;3406;707;1;220825;173620;9,04;78,62;3,68;36
-0159;Svábhegyi Állami Gyermekgyógyintézet, Budapest;05;Csecs.- és gyermekgyógy.;250;250;250;0;250;250;7443;7431;11;1;0;91250;62185;8,35;68,15;0,01;37
-0159;Svábhegyi Állami Gyermekgyógyintézet, Budapest;"";Aktív betegell. oszt. együtt;250;250;250;0;250;250;7443;7431;11;1;0;91250;62185;8,35;68,15;0,01;37
+0159;Svábhegy Állami Gyermekgyógyintézet, Budapest;05;Csecs.- és gyermekgyógy.;250;250;250;0;250;250;7443;7431;11;1;0;91250;62185;8,35;68,15;0,01;37
+0159;Svábhegy Állami Gyermekgyógyintézet, Budapest;"";Aktív betegell. oszt. együtt;250;250;250;0;250;250;7443;7431;11;1;0;91250;62185;8,35;68,15;0,01;37
 0160;Országos Orvosi Rehabilitációs Intézet, Budapest;02;Sebészet;30;30;30;0;30;30;321;243;66;12;0;10950;9431;29,38;86,13;3,74;38
 0160;Országos Orvosi Rehabilitációs Intézet, Budapest;10;Ortopédia;25;25;25;0;25;25;645;623;22;0;0;9125;6837;10,6;74,93;0;38
 0160;Országos Orvosi Rehabilitációs Intézet, Budapest;"";Aktív betegell. oszt. együtt;55;55;55;0;55;55;966;866;88;12;0;20075;16268;16,84;81,04;1,24;38
@@ -890,19 +890,19 @@
 0163;Országos Idegsebészeti Tudományos Intézet, Budapest;02;Sebészet;125;105;105;20;125;105;4317;3029;1285;3;0;38325;25448;5,89;66,4;0,07;41
 0163;Országos Idegsebészeti Tudományos Intézet, Budapest;15;Intenzív betegellátó;31;31;31;0;31;31;1583;277;1234;72;0;11315;7733;4,89;68,34;4,55;41
 0163;Országos Idegsebészeti Tudományos Intézet, Budapest;"";Aktív betegell. oszt. együtt;156;136;136;20;156;136;5900;3306;2519;75;0;49640;33181;5,62;66,84;1,27;41
-0190;Magyarországi Zsidó Hitközösségek Szöv. Szeretetkórháza, Bp.;01;Belgyógyászat;40;40;40;0;40;40;856;162;647;47;0;14600;14332;16,74;98,16;5,49;42
-0190;Magyarországi Zsidó Hitközösségek Szöv. Szeretetkórháza, Bp.;"";Aktív betegell. oszt. együtt;40;40;40;0;40;40;856;162;647;47;0;14600;14332;16,74;98,16;5,49;42
-0191;BM. Központi Kórház és Intézményei;01;Belgyógyászat;130;130;127;0;130;127,5;3989;3696;214;79;3;46530;37013;9,28;79,55;1,98;43
-0191;BM. Központi Kórház és Intézményei;02;Sebészet;77;77;77;0;77;76,2;3122;2890;204;28;13;27829;22393;7,17;80,47;0,9;43
-0191;BM. Központi Kórház és Intézményei;04;Szülészet-nőgyógyászat;37;37;37;0;37;35,7;2013;2003;10;0;6;13015;13052;6,48;100,3;0;43
-0191;BM. Központi Kórház és Intézményei;06;Fül-orr-gégészet;20;20;20;0;20;19,8;954;950;3;1;0;7224;5878;6,16;81,37;0,1;43
-0191;BM. Központi Kórház és Intézményei;09;Ideggyógyászat;34;34;34;0;34;33;1152;1048;89;15;0;12038;10481;9,1;87,07;1,3;43
-0191;BM. Központi Kórház és Intézményei;11;Urológia;25;25;20;0;25;24,9;1223;1187;36;0;0;9105;7697;6,29;84,54;0;43
-0191;BM. Központi Kórház és Intézményei;12;Onkológia, onkoradiológia;55;55;55;0;55;52,5;2110;1930;103;77;0;19145;15616;7,4;81,57;3,65;43
-0191;BM. Központi Kórház és Intézményei;14;Reumatológia;30;30;30;0;30;30;652;638;12;2;0;10950;8908;13,66;81,35;0,31;43
-0191;BM. Központi Kórház és Intézményei;15;Intenzív betegellátó;6;6;6;0;6;6;238;6;189;43;0;2190;1155;4,85;52,74;18,07;43
-0191;BM. Központi Kórház és Intézményei;18;Elmegyógyászat;36;36;36;0;36;36;951;942;9;0;0;13140;11525;12,12;87,71;0;43
-0191;BM. Központi Kórház és Intézményei;"";Aktív betegell. oszt. együtt;450;450;442;0;450;441,6;16404;15290;869;245;22;161166;133718;8,15;82,97;1,49;43
+0190;Magyarországi Zsidó Hitközségek Szöv. Szeretetkórháza, Bp.;01;Belgyógyászat;40;40;40;0;40;40;856;162;647;47;0;14600;14332;16,74;98,16;5,49;42
+0190;Magyarországi Zsidó Hitközségek Szöv. Szeretetkórháza, Bp.;"";Aktív betegell. oszt. együtt;40;40;40;0;40;40;856;162;647;47;0;14600;14332;16,74;98,16;5,49;42
+0191;BM. Központi Kórház és Intézményei, Budapest;01;Belgyógyászat;130;130;127;0;130;127,5;3989;3696;214;79;3;46530;37013;9,28;79,55;1,98;43
+0191;BM. Központi Kórház és Intézményei, Budapest;02;Sebészet;77;77;77;0;77;76,2;3122;2890;204;28;13;27829;22393;7,17;80,47;0,9;43
+0191;BM. Központi Kórház és Intézményei, Budapest;04;Szülészet-nőgyógyászat;37;37;37;0;37;35,7;2013;2003;10;0;6;13015;13052;6,48;100,3;0;43
+0191;BM. Központi Kórház és Intézményei, Budapest;06;Fül-orr-gégészet;20;20;20;0;20;19,8;954;950;3;1;0;7224;5878;6,16;81,37;0,1;43
+0191;BM. Központi Kórház és Intézményei, Budapest;09;Ideggyógyászat;34;34;34;0;34;33;1152;1048;89;15;0;12038;10481;9,1;87,07;1,3;43
+0191;BM. Központi Kórház és Intézményei, Budapest;11;Urológia;25;25;20;0;25;24,9;1223;1187;36;0;0;9105;7697;6,29;84,54;0;43
+0191;BM. Központi Kórház és Intézményei, Budapest;12;Onkológia, onkoradiológia;55;55;55;0;55;52,5;2110;1930;103;77;0;19145;15616;7,4;81,57;3,65;43
+0191;BM. Központi Kórház és Intézményei, Budapest;14;Reumatológia;30;30;30;0;30;30;652;638;12;2;0;10950;8908;13,66;81,35;0,31;43
+0191;BM. Központi Kórház és Intézményei, Budapest;15;Intenzív betegellátó;6;6;6;0;6;6;238;6;189;43;0;2190;1155;4,85;52,74;18,07;43
+0191;BM. Központi Kórház és Intézményei, Budapest;18;Elmegyógyászat;36;36;36;0;36;36;951;942;9;0;0;13140;11525;12,12;87,71;0;43
+0191;BM. Központi Kórház és Intézményei, Budapest;"";Aktív betegell. oszt. együtt;450;450;442;0;450;441,6;16404;15290;869;245;22;161166;133718;8,15;82,97;1,49;43
 0195;MH. Központi Honvédkórház, Budapest;01;Belgyógyászat;179;179;179;0;179;179;5436;5063;195;178;0;65335;47506;8,74;72,71;3,27;44
 0195;MH. Központi Honvédkórház, Budapest;02;Sebészet;100;100;100;0;100;100;3078;2814;162;102;0;36500;25251;8,2;69,18;3,31;44
 0195;MH. Központi Honvédkórház, Budapest;03;Traumatológia;80;80;80;0;80;80;3855;3754;63;38;11;29200;24478;6,35;83,83;0,99;44
@@ -918,7 +918,7 @@
 0195;MH. Központi Honvédkórház, Budapest;18;Elmegyógyászat;31;31;31;0;31;31;543;499;41;3;0;11315;9219;16,98;81,48;0,55;44
 0195;MH. Központi Honvédkórház, Budapest;"";Aktív betegell. oszt. együtt;661;661;661;0;661;661;23976;22787;768;421;266;241265;164834;6,87;68,32;1,76;44
 2203;Szent Ferenc KH., Budapest;01;Belgyógyászat;59;59;59;0;59;59;1809;1691;58;60;0;21535;17863;9,87;82,95;3,32;45
-2203;Szent Ferenc KH., Budapest;02;Sebészet;20;20;20;0;20;20;0;0;0;0;0;7300;0;0;0;0;45
+2203;Szent Ferenc KH., Budapest;02;Sebészet;20;20;20;0;20;20;0;0;0;0;0;7300;0;;0;0;45
 2203;Szent Ferenc KH., Budapest;15;Intenzív betegellátó;6;6;6;0;6;6;494;34;432;28;0;2190;1174;2,38;53,61;5,67;45
 2203;Szent Ferenc KH., Budapest;"";Aktív betegell. oszt. együtt;85;85;85;0;85;85;2303;1725;490;88;0;31025;19037;8,27;61,36;3,82;45
 2208;"""L.S.Gy."" Vadaskert Alapítvány, Budapest";18;Elmegyógyászat;36;36;36;0;36;36;890;890;0;0;0;13140;9121;10,25;69,41;0;46
@@ -944,12 +944,12 @@
 9511;MÁV Kórház, Budapest;10;Ortopédia;36;36;36;0;36;36;1021;969;50;2;2;13140;11468;11,23;87,28;0,2;52
 9511;MÁV Kórház, Budapest;14;Reumatológia;40;40;40;0;40;40;1247;1218;29;0;0;14600;13666;10,96;93,6;0;52
 9511;MÁV Kórház, Budapest;15;Intenzív betegellátó;12;12;12;0;12;12;405;23;322;60;0;4380;1750;4,32;39,95;14,81;52
-9511;MÁV Kórház, Budapest;17;Felvételi osztály;10;0;0;10;10;0;0;0;0;0;0;0;0;;0;;52
+9511;MÁV Kórház, Budapest;17;Felvételi osztály;10;0;0;10;10;0;0;0;0;0;0;0;0;;;0;52
 9511;MÁV Kórház, Budapest;"";Aktív betegell. oszt. együtt;601;591;591;10;607,7;597,7;26116;23765;1933;418;27;218145;178006;6,82;81,6;1,6;52
 9512;Budai MÁV Kórház;01;Belgyógyászat;50;50;50;0;50;50;1496;1368;112;16;0;18250;17106;11,43;93,73;1,07;53
 9512;Budai MÁV Kórház;02;Sebészet;60;60;60;0;60;60;2409;1887;514;8;5;21900;17038;7,07;77,8;0,33;53
 9512;Budai MÁV Kórház;09;Ideggyógyászat;35;35;35;0;35;35;930;395;534;1;0;12775;11843;12,73;92,7;0,11;53
-9512;Budai MÁV Kórház;15;Intenzív betegellátó;7;7;7;0;7;7;517;20;473;24;0;2555;1559;3,02;61,09;4,64;53
+9512;Budai MÁV Kórház;15;Intenzív betegellátó;7;7;7;0;7;7;517;20;473;24;0;2552;1559;3,02;61,09;4,64;53
 9512;Budai MÁV Kórház;19;Tüdőgyógyászat;120;120;120;0;120;119,6;3311;3089;158;64;0;43637;33357;10,07;76,44;1,93;53
 9512;Budai MÁV Kórház;"";Aktív betegell. oszt. együtt;272;272;272;0;272;271,5;8663;6759;1791;113;5;99114;80903;9,34;81,63;1,3;53
 0201;Baranya Megyei Kórház, Pécs;01;Belgyógyászat;120;120;120;0;120;120;4524;4153;266;105;2;43800;33619;7,43;76,76;2,32;56
@@ -959,13 +959,14 @@
 0201;Baranya Megyei Kórház, Pécs;15;Intenzív betegellátó;10;10;10;0;10;10;589;38;441;110;0;3650;2359;4,01;64,63;18,68;56
 0201;Baranya Megyei Kórház, Pécs;16;Fertőző betegellátó;30;30;30;0;30;30;1073;974;69;30;0;10950;8265;7,7;75,48;2,8;56
 0201;Baranya Megyei Kórház, Pécs;18;Elmegyógyászat;30;30;30;0;30;30;988;710;229;49;0;10950;9481;9,6;86,58;4,96;56
+0201;Baranya Megyei Kórház, Pécs;19;Tüdőgyógyászat;120;120;120;0;120;120;4253;3710;258;285;0;43800;34715;8,16;79,26;6,7;56
 0201;Baranya Megyei Kórház, Pécs;"";Aktív betegell. oszt. együtt;480;480;480;0;480;480;21971;19525;1788;658;285;175200;137808;6,27;78,66;2,99;56
 0202;Baranya Megyei Kerpel-Fronius Ödön Gyermekkórház, Pécs;05;Csecs.- és gyermekgyógy.;65;65;65;0;65;65;3185;3112;73;0;0;23725;17900;5,62;75,45;0;57
 0202;Baranya Megyei Kerpel-Fronius Ödön Gyermekkórház, Pécs;15;Intenzív betegellátó;5;5;5;0;5;5;349;42;306;1;0;1825;1457;4,17;79,84;0,29;57
 0202;Baranya Megyei Kerpel-Fronius Ödön Gyermekkórház, Pécs;16;Fertőző betegellátó;20;20;20;0;20;20;1336;1315;21;0;0;7300;6749;5,05;92,45;0;57
 0202;Baranya Megyei Kerpel-Fronius Ödön Gyermekkórház, Pécs;92;Sebészeti típusú mátrix;30;30;30;0;30;30;1755;1725;30;0;0;10950;8822;5,03;80,57;0;57
 0202;Baranya Megyei Kerpel-Fronius Ödön Gyermekkórház, Pécs;"";Aktív betegell. oszt. együtt;120;120;120;0;120;120;6625;6194;430;1;0;43800;34928;5,27;79,74;0,02;57
-0204;Városi Kórház, Mohács;01;Belgyógyászat;73;73;73;0;67,8;67,8;3414;3190;117;107;0;24740;24740;7,25;100;3,13;58
+0204;Városi Kórház, Mohács;01;Belgyógyászat;73;73;73;0;67,8;67,8;3414;3190;117;107;0;24734;24740;7,25;100;3,13;58
 0204;Városi Kórház, Mohács;02;Sebészet;25;25;25;0;25;25;1490;1407;52;31;0;9125;8663;5,81;94,94;2,08;58
 0204;Városi Kórház, Mohács;03;Traumatológia;20;20;20;0;20;20;985;956;20;9;1;7300;4918;4,99;67,37;0,91;58
 0204;Városi Kórház, Mohács;04;Szülészet-nőgyógyászat;28;28;28;0;28;28;1809;1808;1;0;475;10220;11262;6,23;110,2;0;58
@@ -979,7 +980,7 @@
 0204;Városi Kórház, Mohács;"";Aktív betegell. oszt. együtt;273;273;273;0;273;273;14106;13438;420;248;476;99645;91201;6,47;91,53;1,76;58
 0205;Városi KH-RI, Komló;01;Belgyógyászat;50;50;50;0;50;50;2126;1975;10;141;0;18250;15474;7,28;84,79;6,63;59
 0205;Városi KH-RI, Komló;02;Sebészet;40;40;40;0;40;40;2032;1983;5;44;0;14600;11946;5,88;81,82;2,17;59
-0205;Városi KH-RI, Komló;04;Szülészet-nőgyógyászat;30;30;30;0;30;30;1566;1562;1;3;0;10950;7565;4,83;69,09;0,19;59
+0205;Városi KH-RI, Komló;04;Szülészet-nőgyógyászat;30;30;30;0;30;30;1566;1562;1;3;3;10950;7565;4,83;69,09;0,19;59
 0205;Városi KH-RI, Komló;05;Csecs.- és gyermekgyógy.;30;30;30;0;30;30;1460;1459;1;0;0;10950;8471;5,8;77,36;0;59
 0205;Városi KH-RI, Komló;"";Aktív betegell. oszt. együtt;150;150;150;0;150;150;7184;6979;17;188;3;54750;43456;6,05;79,37;2,62;59
 0207;Városi KH-RI, Szigetvár;01;Belgyógyászat;0;0;0;0;27,9;27,9;943;813;79;51;0;10176;7955;8,44;78,17;5,41;60
@@ -994,9 +995,9 @@
 0207;Városi KH-RI, Szigetvár;"";Aktív betegell. oszt. együtt;227;227;227;0;227;227;8818;7928;582;308;3;82855;60859;6,9;73,45;3,49;60
 0209;Megyei Gyógyfürdőkórház, Harkány;14;Reumatológia;80;80;80;0;80;80;2303;2303;0;0;0;29200;28237;12,26;96,7;0;61
 0209;Megyei Gyógyfürdőkórház, Harkány;;Aktív betegell. oszt. együtt;80;80;80;0;80;80;2303;2303;0;0;0;29200;28237;12,26;96,7;0;61
-0231;Siklósi Kórház KHT.,;90;Mátrix intézet;105;105;105;0;105;105;3461;3341;13;107;18;38325;21156;6,11;55,2;3,09;65
-0231;Siklósi Kórház KHT.,;;Aktív betegell. oszt. együtt;105;105;105;0;105;105;3461;3341;13;107;18;38325;21156;6,11;55,2;3,09;65
-0242;Pécsi Tudományegyetem Orvostudományi és Egészségü. Főiskola;01;Belgyógyászat;241;241;241;0;241;241;14463;13477;662;324;105;87367;;6,04;99,32;2,24;66
+0231;Siklósi Kórház KHT., Siklós;90;Mátrix intézet;105;105;105;0;105;105;3461;3341;13;107;18;38325;21156;6,11;55,2;3,09;65
+0231;Siklósi Kórház KHT., Siklós;;Aktív betegell. oszt. együtt;105;105;105;0;105;105;3461;3341;13;107;18;38325;21156;6,11;55,2;3,09;65
+0242;Pécsi Tudományegyetem Orvostudományi és Egészségü. Főiskola;01;Belgyógyászat;241;241;241;0;241;241;14463;13477;662;324;105;87965;87367;6,04;99,32;2,24;66
 0242;Pécsi Tudományegyetem Orvostudományi és Egészségü. Főiskola;02;Sebészet;191;191;191;0;191;191;8780;8205;472;103;2;69715;56730;6,46;81,37;1,17;66
 0242;Pécsi Tudományegyetem Orvostudományi és Egészségü. Főiskola;03;Traumatológia;52;52;52;0;52;52;2715;2658;52;5;1;18980;14396;5,3;75,85;0,18;66
 0242;Pécsi Tudományegyetem Orvostudományi és Egészségü. Főiskola;04;Szülészet-nőgyógyászat;93;93;93;0;93;93;4881;4857;21;3;1025;33945;26245;5,38;77,32;0,06;66
@@ -1010,7 +1011,7 @@
 0242;Pécsi Tudományegyetem Orvostudományi és Egészségü. Főiskola;12;Onkológia, onkoradiológia;131;131;131;0;131;131;3857;3798;26;33;0;47815;28713;7,44;60,05;0,86;66
 0242;Pécsi Tudományegyetem Orvostudományi és Egészségü. Főiskola;13;Fog- és szájsebészet;6;6;6;0;6;6;356;354;2;0;0;2190;1126;3,16;51,42;0;66
 0242;Pécsi Tudományegyetem Orvostudományi és Egészségü. Főiskola;15;Intenzív betegellátó;20;20;20;0;20;20;734;253;352;129;0;7300;3669;5;50,26;17,57;66
-0242;Pécsi Tudományegyetem Orvostudományi és Egészségü. Főiskola;17;Felvételi osztály;5;5;5;0;5;5;520;518;2;0;0;825;904;1,74;49,53;0;66
+0242;Pécsi Tudományegyetem Orvostudományi és Egészségü. Főiskola;17;Felvételi osztály;5;5;5;0;5;5;520;518;2;0;0;1825;904;1,74;49,53;0;66
 0242;Pécsi Tudományegyetem Orvostudományi és Egészségü. Főiskola;18;Elmegyógyászat;51;51;51;0;51;51;1062;1038;23;1;0;18615;13651;12,85;73,33;0,09;66
 0242;Pécsi Tudományegyetem Orvostudományi és Egészségü. Főiskola;"";Aktív betegell. oszt. együtt;1240;1240;1240;0;1240;1240;61556;58696;2043;817;1146;452600;364869;5,93;80,62;1,33;66
 0295;MH. Pécsi Honvéd Kórháza;01;Belgyógyászat;63;63;63;0;63;63;1297;1160;47;90;0;22995;9590;7,39;41,7;6,94;68
@@ -1082,7 +1083,7 @@
 0305;Városi Semmelweis KH-RI, Kiskunhalas;11;Urológia;0;0;0;0;1,7;1,7;120;120;0;0;0;620;482;4,02;77,74;0;75
 0305;Városi Semmelweis KH-RI, Kiskunhalas;14;Reumatológia;36;36;36;0;36;36;1006;1004;2;0;0;13140;10574;10,51;80,47;0;75
 0305;Városi Semmelweis KH-RI, Kiskunhalas;15;Intenzív betegellátó;14;14;14;0;14;14;540;188;232;120;0;5110;3141;5,82;61,47;22,22;75
-0305;Városi Semmelweis KH-RI, Kiskunhalas;16;Fertőző betegellátó;0;0;0;0;5;5;118;102;3;13;0;1825;781;6,62;42,7;11,02;75
+0305;Városi Semmelweis KH-RI, Kiskunhalas;16;Fertőző betegellátó;0;0;0;0;5;5;118;102;3;13;0;1829;781;6,62;42,7;11,02;75
 0305;Városi Semmelweis KH-RI, Kiskunhalas;18;Elmegyógyászat;57;57;57;0;57;57;1339;1277;38;24;0;20805;19942;14,89;95,85;1,79;75
 0305;Városi Semmelweis KH-RI, Kiskunhalas;91;Belgyógyászati típusú mátrix;240;240;240;0;219,6;219,6;7840;7182;263;395;0;80160;57659;7,35;71,93;5,04;75
 0305;Városi Semmelweis KH-RI, Kiskunhalas;92;Sebészeti típusú mátrix;217;217;217;0;198,6;198,6;8826;8637;135;54;15;72478;51589;5,85;71,18;0,61;75
@@ -1117,7 +1118,7 @@
 0402;Városi Réthy Pál KH-RI, Békéscsaba;02;Sebészet;80;80;40;0;80;70,5;2805;2603;137;65;1;25720;16686;5,95;64,88;2,32;80
 0402;Városi Réthy Pál KH-RI, Békéscsaba;03;Traumatológia;75;75;75;0;75;75;2831;2673;127;31;0;27375;19311;6,82;70,54;1,1;80
 0402;Városi Réthy Pál KH-RI, Békéscsaba;04;Szülészet-nőgyógyászat;60;60;60;0;60;60;3576;3410;162;4;8;21900;15593;4,36;71,2;0,11;80
-0402;Városi Réthy Pál KH-RI, Békéscsaba;05;Csecsemő- és gyermekgyógy.;40;40;40;0;40;40;1942;1939;3;0;0;14600;13415;6,91;91,88;0;80
+0402;Városi Réthy Pál KH-RI, Békéscsaba;05;Csecs.- és gyermekgyógy.;40;40;40;0;40;40;1942;1939;3;0;0;14600;13415;6,91;91,88;0;80
 0402;Városi Réthy Pál KH-RI, Békéscsaba;06;Fül-orr-gégészet;30;30;30;0;30;30;1385;1364;15;6;0;10950;5774;4,17;52,73;0,43;80
 0402;Városi Réthy Pál KH-RI, Békéscsaba;07;Szemészet;25;25;25;0;25;25;1041;1031;10;0;0;9125;5461;5,25;59,85;0;80
 0402;Városi Réthy Pál KH-RI, Békéscsaba;10;Ortopédia;39;39;39;0;39;39;1142;1125;15;2;2;14235;10247;8,97;71,98;0,18;80
@@ -1145,7 +1146,7 @@
 0501;Városi Semmelweis Kórház, Miskolc;08;Bőr- és nemibeteg;52;52;52;0;52;52;1252;1200;51;1;0;18980;15029;12;79,18;0,08;87
 0501;Városi Semmelweis Kórház, Miskolc;09;Ideggyógyászat;50;50;50;0;50;50;1600;1539;50;11;0;18250;15759;9,85;86,35;0,69;87
 0501;Városi Semmelweis Kórház, Miskolc;11;Urológia;60;60;60;0;60;60;4441;4049;381;11;318;21900;14095;3,17;64,36;0,25;87
-0501;Városi Semmelweis Kórház, Miskolc;15;Intenzív betegellátó;10;10;10;0;10;10;431;34;334;63;0;1650;1619;3,76;44,36;14,62;87
+0501;Városi Semmelweis Kórház, Miskolc;15;Intenzív betegellátó;10;10;10;0;10;10;431;34;334;63;0;3650;1619;3,76;44,36;14,62;87
 0501;Városi Semmelweis Kórház, Miskolc;16;Fertőző betegellátó;100;100;100;0;100;100;3474;3386;69;19;0;36500;18423;5,3;50,47;0,55;87
 0501;Városi Semmelweis Kórház, Miskolc;18;Elmegyógyászat;75;75;75;0;75;75;1444;617;805;22;0;27375;21736;15,05;79,4;1,52;87
 0501;Városi Semmelweis Kórház, Miskolc;"";Aktív betegell. oszt. együtt;828;828;828;0;828;828;34202;30903;2683;616;2130;302220;230695;6,75;76,33;1,8;87
@@ -1172,17 +1173,17 @@
 0503;Városi Diósgyőri Kórház, Miskolc;09;Ideggyógyászat;85;85;85;0;79,2;79,2;2834;2632;54;148;0;28901;32091;11,32;111;5,22;89
 0503;Városi Diósgyőri Kórház, Miskolc;15;Intenzív betegellátó;5;5;5;0;5;5;141;18;84;39;0;1825;984;6,98;53,92;27,66;89
 0503;Városi Diósgyőri Kórház, Miskolc;"";Aktív betegell. oszt. együtt;329;329;329;0;325;325;14463;13735;349;379;136;118610;101028;6,99;85,18;2,62;89
-0504;Városi Erzsébet Kórház, Sátoraljaújhely;01;Belgyógyászat;88;88;88;0;88;;3357;2982;261;114;0;32120;28130;8,38;87,58;3,4;90
-0504;Városi Erzsébet Kórház, Sátoraljaújhely;02;Sebészet;46;46;46;0;46;;2606;2328;257;21;1;16790;13008;4,99;77,47;0,81;90
-0504;Városi Erzsébet Kórház, Sátoraljaújhely;04;Szülészet-nőgyógyászat;35;35;35;0;35;;1861;1853;7;1;0;12775;8472;4,55;66,32;0,05;90
-0504;Városi Erzsébet Kórház, Sátoraljaújhely;05;Csecs.- és gyermekgyógy.;30;30;30;0;30;;1372;1370;2;0;0;10950;8545;6,23;78,04;0;90
-0504;Városi Erzsébet Kórház, Sátoraljaújhely;06;Fül-orr-gégészet;15;15;15;0;15;;533;526;7;0;0;5475;4600;8,63;84,02;0;90
-0504;Városi Erzsébet Kórház, Sátoraljaújhely;07;Szemészet;15;15;15;0;15;;483;479;4;0;0;5475;3547;7,34;64,79;0;90
-0504;Városi Erzsébet Kórház, Sátoraljaújhely;08;Bőr- és nemibeteg;20;20;20;0;20;;508;481;25;2;0;7300;6064;11,94;83,07;0,39;90
-0504;Városi Erzsébet Kórház, Sátoraljaújhely;09;Ideggyógyászat;50;50;50;0;50;;1860;1700;75;85;0;18250;15009;8,07;82,24;4,57;90
-0504;Városi Erzsébet Kórház, Sátoraljaújhely;15;Intenzív betegellátó;9;9;9;0;9;;485;105;332;48;0;3285;2150;4,43;65,45;9,9;90
-0504;Városi Erzsébet Kórház, Sátoraljaújhely;18;Elmegyógyászat;40;40;40;0;40;;1224;942;259;23;0;14600;10725;8,76;73,46;1,88;90
-0504;Városi Erzsébet Kórház, Sátoraljaújhely;"";Aktív betegell. oszt. együtt;348;348;348;0;348;;14289;12766;1229;294;1;127020;100250;7,02;78,92;2,06;90
+0504;Városi Erzsébet Kórház, Sátoraljaújhely;01;Belgyógyászat;88;88;88;0;88;88;3357;2982;261;114;0;32120;28130;8,38;87,58;3,4;90
+0504;Városi Erzsébet Kórház, Sátoraljaújhely;02;Sebészet;46;46;46;0;46;46;2606;2328;257;21;1;16790;13008;4,99;77,47;0,81;90
+0504;Városi Erzsébet Kórház, Sátoraljaújhely;04;Szülészet-nőgyógyászat;35;35;35;0;35;35;1861;1853;7;1;0;12775;8472;4,55;66,32;0,05;90
+0504;Városi Erzsébet Kórház, Sátoraljaújhely;05;Csecs.- és gyermekgyógy.;30;30;30;0;30;30;1372;1370;2;0;0;10950;8545;6,23;78,04;0;90
+0504;Városi Erzsébet Kórház, Sátoraljaújhely;06;Fül-orr-gégészet;15;15;15;0;15;15;533;526;7;0;0;5475;4600;8,63;84,02;0;90
+0504;Városi Erzsébet Kórház, Sátoraljaújhely;07;Szemészet;15;15;15;0;15;15;483;479;4;0;0;5475;3547;7,34;64,79;0;90
+0504;Városi Erzsébet Kórház, Sátoraljaújhely;08;Bőr- és nemibeteg;20;20;20;0;20;20;508;481;25;2;0;7300;6064;11,94;83,07;0,39;90
+0504;Városi Erzsébet Kórház, Sátoraljaújhely;09;Ideggyógyászat;50;50;50;0;50;50;1860;1700;75;85;0;18250;15009;8,07;82,24;4,57;90
+0504;Városi Erzsébet Kórház, Sátoraljaújhely;15;Intenzív betegellátó;9;9;9;0;9;9;485;105;332;48;0;3285;2150;4,43;65,45;9,9;90
+0504;Városi Erzsébet Kórház, Sátoraljaújhely;18;Elmegyógyászat;40;40;40;0;40;40;1224;942;259;23;0;14600;10725;8,76;73,46;1,88;90
+0504;Városi Erzsébet Kórház, Sátoraljaújhely;"";Aktív betegell. oszt. együtt;348;348;348;0;348;348;14289;12766;1229;294;1;127020;100250;7,02;78,92;2,06;90
 0505;Kazincbarcikai Városi Kórház;01;Belgyógyászat;90;90;59;0;90;89,2;2891;2412;217;262;0;32571;30176;10,44;92,65;9,06;91
 0505;Kazincbarcikai Városi Kórház;05;Csecs.- és gyermekgyógy.;30;30;30;0;30;30;1454;1452;1;1;0;10950;9050;6,22;82,65;0,07;91
 0505;Kazincbarcikai Városi Kórház;15;Intenzív betegellátó;10;10;10;0;10;10;354;117;186;51;0;3650;2529;7,14;69,29;14,41;91
