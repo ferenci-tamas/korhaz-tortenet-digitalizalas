@@ -20,7 +20,7 @@ lang: hu
 - A beszkennelt oldalakat némi grafikai előkészítés után multimodális nagy nyelvi modellel ismertettem fel, mely lényegében egy optikai karakterfelismerést hajtott végre, de a szokásos módszereknél sokkal hatékonyabban, jól megőrizve az adatok táblázatos formátumát is. E nélkül valószínűleg lehetetlen lett volna számomra ekkora mennyiségű információ gépi úton feldolgozható formátumban történő digitalizálása.
 - A felismerés szinte hibátlan volt, de nem feltétlenül tökéletesen hibátlan; ez függött az alkalmazott modelltől is. Akárhogy is, gondot fordítottam az adatok alapos ellenőrzésére; a véleményem szerint ez minden ilyen és ehhez hasonló projektnél fontos kérdés. Ennek részleteit és tanulságait is ismertetem itt.
 - Ezen az oldalon megadom a teljes kódot is, mely a feldolgozást végezte.
-- A munka folyamatosan zajlik, egyelőre a 2002-es év feldolgozása fejeződött be. Ez az oldal bemutatja a projekt hátterét és dokumentálja a haladást.
+- A munka folyamatosan zajlik, egyelőre a 2000-2002 évek feldolgozása fejeződött be. Ez az oldal bemutatja a projekt hátterét és dokumentálja a haladást.
 
 ## Motiváció
 
@@ -310,7 +310,7 @@ Ez volt a folyamat illusztrációja, amit minden évre meg kell csinálnunk. Ha 
 Ennek során kidobhatjuk a `file` oszlopot, amire többé már nem lesz szükség (eddig is csak a képfájl kikeresését gyorsította), valamint rakjuk hozzá új oszlopként az évet, további állítsunk be rendes -- természetesen a korábbi projektben használt, 2003 utáni adatokkal egyező! -- oszlopneveket. Itt egyedül arra kell vigyázni, hogy 2002 előtt más volt az oszlopok sorrendje (és sajnos kis részt a tartalma is, tehát más adatok szerepeltek, de szerencsére a legtöbb oszlop megvan minden évre):
 
 ```{r}
-res <- rbindlist(lapply(2001:2002, function(ev) {
+res <- rbindlist(lapply(2000:2002, function(ev) {
   temp <- fread(paste0("./rawdata/RawData2-", ev, "-corrected.csv"), keepLeadingZeros = TRUE)
   temp <- temp[, .SD[1:(which(V4 %in% stopline)[1] - 1)], .(V2)]
   temp$file <- NULL
@@ -337,6 +337,19 @@ res <- rbindlist(lapply(2001:2002, function(ev) {
 }), fill = TRUE)
 ```
 
+A szakmakódokban van egy kis bizonytalanság (de ezt elég lesz ezen a ponton javítani):
+
+```{r}
+table(res$SzakmaKod)
+```
+
+A javításhoz távolítsuk el a felesleges pontokat, a vezető nullákat, de tartsuk meg az adatot sztringként:
+
+```{r}
+res$SzakmaKod <- as.character(as.numeric(trimws(gsub(".", "", res$SzakmaKod, fixed = TRUE))))
+table(res$SzakmaKod)
+```
+
 Nézzük meg hogyan sikerült a szakmák neveinek felismerése:
 
 ```{r}
@@ -350,10 +363,15 @@ as.data.table(table(res$SzakmaKod, res$SzakmaMegnev))[N != 0][
   duplicated(V1) | duplicated(V1, fromLast = TRUE)]
 ```
 
-Egész jó a helyzet, csak néhány elnevezést kell javítani, illetve egységesíteni:
+Ahol szükséges, ott javítsuk, illetve egységesítsük az elnevezéseket:
 
 ```{r}
-res[SzakmaKod == "05"]$SzakmaMegnev <- "Csecsemő- és gyermekgyógyászat"
+res[SzakmaKod == "4"]$SzakmaMegnev <- "Szülészet-nőgyógyászat"
+res[SzakmaKod == "5"]$SzakmaMegnev <- "Csecsemő- és gyermekgyógyászat"
+res[SzakmaKod == "6"]$SzakmaMegnev <- "Fül-orr-gégészet"
+res[SzakmaKod == "9"]$SzakmaMegnev <- "Ideggyógyászat"
+res[SzakmaKod == "11"]$SzakmaMegnev <- "Urológia"
+res[SzakmaKod == "12"]$SzakmaMegnev <- "Onkológia, onkoradiológia"
 res[SzakmaKod == "15"]$SzakmaMegnev <- "Intenzív betegellátó"
 res[SzakmaKod == "92"]$SzakmaMegnev <- "Sebészeti típusú mátrix"
 ```
@@ -385,6 +403,15 @@ openxlsx2::write_xlsx(res, "./output/ferenci-tamas-korhaz-agyszam-betegforgalom-
 ## Adatbeolvasási megállapítások
 
 Amint a fenti leírásból is kiderült, azokban az esetekben, ahol az összegzősor nem-egyezése, illetve az adathiány mögött tényleges beolvasási hiba volt, kézzel javítottam a táblázatot. Előfordultak azonban olyan esetek is, amikor nem valódi hiba állt az eltérés, illetve az adathiány mögött. A következőkben a teljesség és transzparencia kedvéért ezeket dokumentálom, megadva a kórház azonosítóját, és annak magyarázatát, hogy miért nem igényelt javítást az eltérés.
+
+### 2000
+
+Összegzési eltérések: nem volt ilyen.
+
+Adathiányok:
+
+- 0701: tényleges adathiány a 12-es és a 13 szakmában az átlagos ápolási időtartamnál
+- 1102: tényleges adathiány a 8-as és a 12-es szakmában az átlagos ápolási időtartamnál és az ágykihasználásnál
 
 ### 2001
 

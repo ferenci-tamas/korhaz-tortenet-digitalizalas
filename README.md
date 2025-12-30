@@ -2,7 +2,7 @@ Az 1993 és 2002 közötti magyar kórházi ágyszám- és betegforgalmi
 kimutatások digitalizációja
 ================
 Ferenci Tamás (<https://www.medstat.hu/>)<br>
-2025. december 27.
+2025. december 31.
 
 - [Összefoglaló](#összefoglaló)
 - [Motiváció](#motiváció)
@@ -10,6 +10,7 @@ Ferenci Tamás (<https://www.medstat.hu/>)<br>
 - [Tanulságok](#tanulságok)
 - [Technikai részletek](#technikai-részletek)
 - [Adatbeolvasási megállapítások](#adatbeolvasási-megállapítások)
+  - [2000](#2000)
   - [2001](#2001)
   - [2002](#2002)
 
@@ -58,7 +59,7 @@ Ferenci Tamás (<https://www.medstat.hu/>)<br>
   részleteit és tanulságait is ismertetem itt.
 - Ezen az oldalon megadom a teljes kódot is, mely a feldolgozást
   végezte.
-- A munka folyamatosan zajlik, egyelőre a 2002-es év feldolgozása
+- A munka folyamatosan zajlik, egyelőre a 2000-2002 évek feldolgozása
   fejeződött be. Ez az oldal bemutatja a projekt hátterét és
   dokumentálja a haladást.
 
@@ -854,7 +855,7 @@ más adatok szerepeltek, de szerencsére a legtöbb oszlop megvan minden
 évre):
 
 ``` r
-res <- rbindlist(lapply(2001:2002, function(ev) {
+res <- rbindlist(lapply(2000:2002, function(ev) {
   temp <- fread(paste0("./rawdata/RawData2-", ev, "-corrected.csv"), keepLeadingZeros = TRUE)
   temp <- temp[, .SD[1:(which(V4 %in% stopline)[1] - 1)], .(V2)]
   temp$file <- NULL
@@ -881,6 +882,35 @@ res <- rbindlist(lapply(2001:2002, function(ev) {
 }), fill = TRUE)
 ```
 
+A szakmakódokban van egy kis bizonytalanság (de ezt elég lesz ezen a
+ponton javítani):
+
+``` r
+table(res$SzakmaKod)
+```
+
+    ## 
+    ##      01  02  03  04  05  06  07  08  09   1  1.  10 10.  11 11.  12 12.  13 13. 
+    ##   2 227 196 116 183 160 137 116  56 142  61  58  58  20 117  24  76  21  48  10 
+    ##  14 14.  15 15.  16 16.  17  18  19   2  2.   3  3.   4  4.   5  5.   6  6.   7 
+    ##  75  20 227  58  60  17  45 116  65  43  67  27  32  44  55  45  37  37  38  38 
+    ##  7.   8  8.   9  9.  90  91  92 
+    ##  23  11  19  34  37  16   2  16
+
+A javításhoz távolítsuk el a felesleges pontokat, a vezető nullákat, de
+tartsuk meg az adatot sztringként:
+
+``` r
+res$SzakmaKod <- as.character(as.numeric(trimws(gsub(".", "", res$SzakmaKod, fixed = TRUE))))
+table(res$SzakmaKod)
+```
+
+    ## 
+    ##   1  10  11  12  13  14  15  16  17  18  19   2   3   4   5   6   7   8   9  90 
+    ## 346  78 141  97  58  95 285  77  45 116  65 306 175 282 242 212 177  86 213  16 
+    ##  91  92 
+    ##   2  16
+
 Nézzük meg hogyan sikerült a szakmák neveinek felismerése:
 
 ``` r
@@ -891,36 +921,44 @@ res[, .N, .(SzakmaKod, SzakmaMegnev)][order(SzakmaKod)]
 
 | SzakmaKod | SzakmaMegnev                 |   N |
 |:----------|:-----------------------------|----:|
-|           | Árvíz szükség osztály        |   2 |
-| 01        | Belgyógyászat                | 227 |
-| 02        | Sebészet                     | 196 |
-| 03        | Traumatológia                | 116 |
-| 04        | Szülészet-nőgyógyászat       | 183 |
-| 05        | Csecs.- és gyermekgyógy.     | 153 |
-| 05        | Csecs.- és gyermekgyógy      |   1 |
-| 05        | Csecs - és gyermekgyógy.     |   1 |
-| 05        | Csecs,- és gyermekgyógy.     |   3 |
-| 05        | Csecs- és gyermekgyógy.      |   1 |
-| 05        | Csecsemő- és gyermekgyógy.   |   1 |
-| 06        | Fül-orr-gégészet             | 137 |
-| 07        | Szemészet                    | 116 |
-| 08        | Bőr- és nemibeteg            |  56 |
-| 09        | Ideggyógyászat               | 142 |
-| 10        | Ortopédia                    |  52 |
-| 11        | Urológia                     |  92 |
-| 12        | Onkológia, onkoradiológia    |  66 |
-| 13        | Fog- és szájsebészet         |  38 |
-| 14        | Reumatológia                 |  64 |
-| 15        | Intenzív betegellátó         | 192 |
+| 1         | Belgyógyászat                | 346 |
+| 10        | Ortopédia                    |  78 |
+| 11        | Urológia                     | 140 |
+| 11        | Urologia                     |   1 |
+| 12        | Onkológia, onkoradiológia    |  95 |
+| 12        | Onkológia. onkoradiológia    |   1 |
+| 12        | Onkologia, onkoradiológia    |   1 |
+| 13        | Fog- és szájsebészet         |  58 |
+| 14        | Reumatológia                 |  95 |
+| 15        | Intenzív betegellátó         | 283 |
 | 15        | Intenziv betegellátó         |   2 |
-| 16        | Fertőző betegellátó          |  50 |
-| 17        | Felvételi osztály            |  42 |
+| 16        | Fertőző betegellátó          |  77 |
+| 17        | Felvételi osztály            |  45 |
 | 18        | Elmegyógyászat               | 116 |
 | 19        | Tüdőgyógyászat               |  65 |
+| 2         | Sebészet                     | 306 |
+| 3         | Traumatológia                | 175 |
+| 4         | Szülészet-nőgyógyászat       | 281 |
+| 4         | Szülészet-nogyógyászat       |   1 |
+| 5         | Csecs.- és gyermekgyógy.     | 174 |
+| 5         | Csecs - és gyermekgyógy      |  15 |
+| 5         | Csecs.- és gyermekgyógy      |  40 |
+| 5         | Csecs - és gyermekgyógy.     |   7 |
+| 5         | Csecs.- és gyermekgyogy      |   1 |
+| 5         | Csecs,- és gyermekgyógy.     |   3 |
+| 5         | Csecs- és gyermekgyógy.      |   1 |
+| 5         | Csecsemő- és gyermekgyógy.   |   1 |
+| 6         | Fül-orr-gégészet             | 211 |
+| 6         | Fül-orr-gégészel             |   1 |
+| 7         | Szemészet                    | 177 |
+| 8         | Bőr- és nemibeteg            |  86 |
+| 9         | Ideggyógyászat               | 210 |
+| 9         | Idegyógyászat                |   3 |
 | 90        | Mátrix intézet               |  16 |
 | 91        | Belgyógyászati típusú mátrix |   2 |
 | 92        | Sebészeti tipusú mátrix      |   1 |
 | 92        | Sebészeti típusú mátrix      |  15 |
+| NA        | Árvíz szükség osztály        |   2 |
 
 </div>
 
@@ -937,24 +975,41 @@ as.data.table(table(res$SzakmaKod, res$SzakmaMegnev))[N != 0][
 
 | V1  | V2                         |   N |
 |:----|:---------------------------|----:|
-| 05  | Csecs- és gyermekgyógy.    |   1 |
-| 05  | Csecs - és gyermekgyógy.   |   1 |
-| 05  | Csecs,- és gyermekgyógy.   |   3 |
-| 05  | Csecs.- és gyermekgyógy    |   1 |
-| 05  | Csecs.- és gyermekgyógy.   | 153 |
-| 05  | Csecsemő- és gyermekgyógy. |   1 |
+| 5   | Csecs- és gyermekgyógy.    |   1 |
+| 5   | Csecs - és gyermekgyógy    |  15 |
+| 5   | Csecs - és gyermekgyógy.   |   7 |
+| 5   | Csecs,- és gyermekgyógy.   |   3 |
+| 5   | Csecs.- és gyermekgyogy    |   1 |
+| 5   | Csecs.- és gyermekgyógy    |  40 |
+| 5   | Csecs.- és gyermekgyógy.   | 174 |
+| 5   | Csecsemő- és gyermekgyógy. |   1 |
+| 6   | Fül-orr-gégészel           |   1 |
+| 6   | Fül-orr-gégészet           | 211 |
+| 9   | Ideggyógyászat             | 210 |
+| 9   | Idegyógyászat              |   3 |
 | 15  | Intenziv betegellátó       |   2 |
-| 15  | Intenzív betegellátó       | 192 |
+| 15  | Intenzív betegellátó       | 283 |
+| 12  | Onkologia, onkoradiológia  |   1 |
+| 12  | Onkológia, onkoradiológia  |  95 |
+| 12  | Onkológia. onkoradiológia  |   1 |
 | 92  | Sebészeti tipusú mátrix    |   1 |
 | 92  | Sebészeti típusú mátrix    |  15 |
+| 4   | Szülészet-nogyógyászat     |   1 |
+| 4   | Szülészet-nőgyógyászat     | 281 |
+| 11  | Urologia                   |   1 |
+| 11  | Urológia                   | 140 |
 
 </div>
 
-Egész jó a helyzet, csak néhány elnevezést kell javítani, illetve
-egységesíteni:
+Ahol szükséges, ott javítsuk, illetve egységesítsük az elnevezéseket:
 
 ``` r
-res[SzakmaKod == "05"]$SzakmaMegnev <- "Csecsemő- és gyermekgyógyászat"
+res[SzakmaKod == "4"]$SzakmaMegnev <- "Szülészet-nőgyógyászat"
+res[SzakmaKod == "5"]$SzakmaMegnev <- "Csecsemő- és gyermekgyógyászat"
+res[SzakmaKod == "6"]$SzakmaMegnev <- "Fül-orr-gégészet"
+res[SzakmaKod == "9"]$SzakmaMegnev <- "Ideggyógyászat"
+res[SzakmaKod == "11"]$SzakmaMegnev <- "Urológia"
+res[SzakmaKod == "12"]$SzakmaMegnev <- "Onkológia, onkoradiológia"
 res[SzakmaKod == "15"]$SzakmaMegnev <- "Intenzív betegellátó"
 res[SzakmaKod == "92"]$SzakmaMegnev <- "Sebészeti típusú mátrix"
 ```
@@ -982,7 +1037,7 @@ plot(res$MeghaltBetegSzam / res$ElbocsatottBetegSzam * 100, res$Halalozas)
 abline(0,1)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
 
 ``` r
 max(abs(res$MeghaltBetegSzam / res$ElbocsatottBetegSzam * 100 -
@@ -1009,6 +1064,17 @@ azonban olyan esetek is, amikor nem valódi hiba állt az eltérés, illetve
 az adathiány mögött. A következőkben a teljesség és transzparencia
 kedvéért ezeket dokumentálom, megadva a kórház azonosítóját, és annak
 magyarázatát, hogy miért nem igényelt javítást az eltérés.
+
+### 2000
+
+Összegzési eltérések: nem volt ilyen.
+
+Adathiányok:
+
+- 0701: tényleges adathiány a 12-es és a 13 szakmában az átlagos ápolási
+  időtartamnál
+- 1102: tényleges adathiány a 8-as és a 12-es szakmában az átlagos
+  ápolási időtartamnál és az ágykihasználásnál
 
 ### 2001
 
